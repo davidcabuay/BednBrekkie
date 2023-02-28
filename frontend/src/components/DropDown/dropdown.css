@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Roboto&display=swap');
+
+.menu:hover {
+cursor: pointer;
+}
+
+/* .dropdown-list:hover {
+    cursor: pointer;
+    background-color: lightgray;
+} */
+
+.dropdown-ul li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.dropdown-list {
+    padding: 5px;
+    font-family: Roboto;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.dropdown-context {
+    margin-top: 10px;
+    border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 45%) 0px 0px 4px;
+    height: 120px;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+}
+
+/* .dropdown-context:hover {
+    cursor: pointer;
+    background-color: lightgray;
+} */
+
+ul {
+    list-style-type: none;
+}
+

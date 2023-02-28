@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Roboto&display=swap');
+
+
+ul {
+    list-style-type: none;
+}
+
+ul:hover{
+    cursor: pointer;
+}
+
+.profile-dropdown{
+    font-family: Roboto;
+    width:fit-content;
+    padding: 5px;
+
+}
+.profileicon:hover{
+    cursor: pointer;
+}
+
+.profile-dropdown li:hover{
+    background-color: lightgrey;
+}
+
+.profile-dropdown li{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navwrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+

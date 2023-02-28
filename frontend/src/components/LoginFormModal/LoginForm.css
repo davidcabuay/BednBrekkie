@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Roboto&display=swap');
+
+h3 {
+    font-family: Roboto;
+    text-align: center;
+}
+
+form {
+    width: 200px;
+    font-family: Roboto;
+}
+
+.logininput {
+    /* margin-top: 30px; */
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 10px;
+    background-color: transparent;
+    padding: 26px 36px 10px 12px;
+    border-width: thin ;
+}
+
+.loginpassword {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* margin-bottom: 50px; */
+    height: 10px;
+    background-color: transparent;
+    padding: 26px 36px 10px 12px;
+    border-width: thin ;
+    border-top: transparent;
+}
+
+.loginwrapper {
+    height: 450px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* border-radius: 0px; */
+}
+
+.loginbutton {
+    /* background-size: 200% 200%;
+    transition: opacity 1.25s;
+    background-image: radial-gradient( circle at center,var(--ihf-tp-q) 0%,#e61e4d 27.5%,#e31c5f 40%,#d70466 57.5%,#bd1e59 75%,#bd1e59 100% ); */
+    background-color:#d70466 ;
+    font-family: Roboto;
+    border-radius: 8px;
+    height: 36px;
+    color: aliceblue;
+    border-color: transparent;
+    width: 185px;
+    cursor: pointer;
+    /* padding-top: 20px; */
+}
+
+.loginbutton:hover {
+    background-color:#e61e4d;
+}
+
+.errors{
+    color: red;
+    font-size: smaller;
+    text-align: left;
+}
+
+.error-list {
+    list-style-type: square;
+    font-size: small;
+    font-family: Roboto;
+    top: -140px;
+    position: relative;
+    width: 250px;
+}
+
+.buttondiv {
+    padding-top: 10px;
+}
+
+input:focus ~ .floating-label4,
+input:not(:focus):valid ~ .floating-label4{
+    top: 225px;
+    bottom: 10px;
+    left: 98px;
+    font-size: 11px;
+    opacity: 1;
+}
+
+.floating-label4 {
+    position: absolute;
+    pointer-events: none;
+    left: 98px;
+    top: 235px;
+    transition: 0.2s ease all;
+    color: grey;
+}
+
+input:focus ~ .floating-label5,
+input:not(:focus):valid ~ .floating-label5{
+    top: 270px;
+    bottom: 10px;
+    left: 98px;
+    font-size: 11px;
+    opacity: 1;
+}
+.floating-label5 {
+    position: absolute;
+    pointer-events: none;
+    left: 98px;
+    top: 280px;
+    transition: 0.2s ease all;
+    color: grey;
+}
