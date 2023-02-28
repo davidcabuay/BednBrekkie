@@ -12,7 +12,7 @@
     "node": "16.18.1"
   },
   "name": "bednbrekkie",
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "An AirBnB clone",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
