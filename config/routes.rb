@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :listings, only: [:index, :create, :show]
   end
   
+  get '*path', to: "static_pages#frontend_index"
   # Defines the root path route ("/")
   # root "articles#index"
 end
