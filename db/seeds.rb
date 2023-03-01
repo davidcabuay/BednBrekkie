@@ -9,6 +9,7 @@ ApplicationRecord.transaction do
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
+    Listing.destroy_all
 
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
@@ -28,6 +29,22 @@ ApplicationRecord.transaction do
         # username: Faker::Internet.unique.username(specifier: 3),
         email: Faker::Internet.unique.email,
         password: 'password'
+        }) 
+    end
+
+    5.times do 
+        Listing.create!({
+        # username: Faker::Internet.unique.username(specifier: 3),
+        host_id: 1,
+        price: 500,
+        title: '2 bedroom house', 
+        description: '2 bed 2 bath',
+        address: 'Granville',
+        city: 'Vancouver',
+        num_of_guests: 2,
+        num_of_bedrooms: 2,
+        num_of_baths: 2,
+        num_of_beds: 2
         }) 
     end
     

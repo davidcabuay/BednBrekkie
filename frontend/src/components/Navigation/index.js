@@ -33,7 +33,6 @@ function Navigation(){
                     <HomeIcon />
                 </NavLink>
                 <div className='sessionlink'>{sessionLinks}</div>
-           
         </div>
     );
 }
