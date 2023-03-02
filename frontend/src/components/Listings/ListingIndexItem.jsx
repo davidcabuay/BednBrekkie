@@ -12,10 +12,10 @@ export default function ListingIndexItem({listing}){
         <>
             <Link to={`/listings/${listing.id}`} className="listItem">
                 <div><img src={tempImg} alt='placeholder'className="item-img"/></div>
-                <ul>
-                    <li>{listing.address}, {listing.city}</li>
+                <ul className='item-text'>
+                    <li className='boldtext'>{listing.address}, {listing.city}</li>
                     <li>{listing.title}</li>
-                    <li>${listing.price} night</li>
+                    <li><span className='boldtext'>${listing.price}</span>  night</li>
                 </ul>
             </Link>
         </>

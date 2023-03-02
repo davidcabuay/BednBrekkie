@@ -1,15 +1,124 @@
-.listItem {
-    border-style: solid;
-    
+.indexpage {
+    margin: 0 7vw;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
 
-.item-img {
-    max-height: 300px;
-    
-}
-
-.listingsul {
-    display: flex;
+.listingscontainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
+    margin: 10px;
 
 }
+
+.listItem {
+    padding: 5px;
+    height: 33vw;
+    width: 21vw;
+
+    
+}
+
+.item-text{
+    color: black;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.boldtext{
+    font-weight: bold;
+}
+.item-img {
+    height: 20vw;
+    width: 20vw;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: all ease-in .35s;
+}
+
+.item-img:hover {
+    height: 21vw;
+    width: 21vw;
+}
+
+
+
+@media (max-width: 1200px) {
+    .listingscontainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+
+    .item-img{
+        height: 30vw;
+        width: 30vw
+    }
+
+    .item-img:hover {
+        height: 31vw;
+        width: 31vw;
+    }
+
+    .listItem{
+        width: 30vw;
+        height: 40vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .listingscontainer {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+
+    .item-img{
+        height: 40vw;
+        width: 40vw
+    }
+
+    .item-img:hover {
+        height: 41vw;
+        width: 41vw;
+    }
+
+    .listItem{
+        width: 40vw;
+        height: 55vw;
+    }
+ 
+}
+@media (max-width: 600px) {
+    .listingscontainer {
+        display: grid;
+        grid-template-columns: auto ;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+
+    .item-img{
+        height: 70vw;
+        width: 70vw
+    }
+
+    .item-img:hover {
+        height: 51vw;
+        width: 51vw;
+    }
+
+    .listItem{
+        width: 50vw;
+        height: 90vw;
+    }
+ /* need to fix side margins */
+
+}
+
+.listItem:link { text-decoration: none;}
+.listItem:visited { text-decoration: none;}
+.listItem:hover { text-decoration: none;}
+.listItem:active { text-decoration: none;}

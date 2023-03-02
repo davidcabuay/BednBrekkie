@@ -16,9 +16,9 @@ export default function ListingIndex(){
 
 
     return(
-        <>
-        <ul className = "listingsul">{listings.map((listing)=> <ListingIndexItem key={listing.id} listing={listing} />)}</ul>
-        </>
+        <div className='indexpage'>
+        <div className = "listingscontainer">{listings.map((listing)=> <ListingIndexItem key={listing.id} listing={listing} className="listItem"/>)}</div>
+        </div>
     )
 
 }

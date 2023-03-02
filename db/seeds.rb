@@ -62,18 +62,131 @@ ApplicationRecord.transaction do
         num_of_beds: 1
         ) 
 
-        Listing.create!(
+    Listing.create!(
             # username: Faker::Internet.unique.username(specifier: 3),
-            host_id: 3,
-            price: 300,
-            title: '4 bedroom house', 
-            description: '5 bed 3 bath',
-            address: 'Kitsilano',
-            city: 'Vancouver',
-            num_of_guests: 8,
-            num_of_bedrooms: 4,
-            num_of_baths: 3,
-            num_of_beds: 6
-            ) 
+        host_id: 3,
+        price: 300,
+        title: '4 bedroom house', 
+        description: '5 bed 3 bath',
+        address: 'Kitsilano',
+        city: 'Vancouver',
+        num_of_guests: 8,
+        num_of_bedrooms: 4,
+        num_of_baths: 3,
+        num_of_beds: 6
+    ) 
+    Listing.create!(
+        # username: Faker::Internet.unique.username(specifier: 3),
+    host_id: 4,
+    price: 400,
+    title: '5 bedroom house', 
+    description: '6 bed 3 bath',
+    address: 'Seymour',
+    city: 'Vancouver',
+    num_of_guests: 8,
+    num_of_bedrooms: 4,
+    num_of_baths: 3,
+    num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 5,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 6,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 7,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 8,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 9,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 10,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+Listing.create!(
+    # username: Faker::Internet.unique.username(specifier: 3),
+host_id: 11,
+price: 300,
+title: '4 bedroom house', 
+description: '5 bed 3 bath',
+address: 'Kitsilano',
+city: 'Vancouver',
+num_of_guests: 8,
+num_of_bedrooms: 4,
+num_of_baths: 3,
+num_of_beds: 6
+) 
+
+                
     puts "Done!"
 end
