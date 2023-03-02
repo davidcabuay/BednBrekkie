@@ -1,11 +1,11 @@
 import { legacy_createStore, combineReducers, applyMiddleware, compose } from "redux"; 
 import thunk from "redux-thunk";
 import session from "./session";
-import listing from "./listing";
+import listings from "./listing";
 
 export const rootReducer = combineReducers({
     session,
-    listing
+    listings
 })
 
 

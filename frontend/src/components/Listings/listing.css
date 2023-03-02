@@ -1,0 +1,15 @@
+.listItem {
+    border-style: solid;
+    
+}
+
+.item-img {
+    max-height: 300px;
+    
+}
+
+.listingsul {
+    display: flex;
+    justify-content: space-evenly;
+
+}

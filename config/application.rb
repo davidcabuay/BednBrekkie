@@ -21,6 +21,8 @@ Bundler.require(*Rails.groups)
 module BednBrekkie
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    
+    
     config.load_defaults 7.0
 
     config.middleware.use ActionDispatch::Cookies
@@ -28,6 +30,10 @@ module BednBrekkie
       key: '_auth_me_session',
       same_site: :lax, 
       secure: Rails.env.production?
+
+      initializer(:remove_extra_routes, after: :add_routing_paths) { |app|
+        app.routes_reloader.paths.delete_if {|path| path =~ /actionmailbox/ }
+      }
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

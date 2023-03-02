@@ -18,15 +18,16 @@ const setListings = (listings) => {
 }
 
 export const getListing = (listingId) => (state) => {
-    return state.listings? state.listings[listingId] : null
+    return state.listings ? state.listings[listingId] : null
 }
 
 export const getListings = (state) => {
-    return state.listings? Object.values(state.listings) : []
+    // console.log(state, 'getlistings')
+    return state.listings ? Object.values(state.listings) : []
 }
 
-export const fetchListings = () => async(dispatch)=>{
-    const response = await csrfFetch(`api/listings`)
+export const fetchListings = () => async(dispatch)=> {
+    const response = await csrfFetch(`/api/listings`)
     if (response.ok){
         const listings = await response.json();
         dispatch(setListings(listings))
@@ -34,7 +35,7 @@ export const fetchListings = () => async(dispatch)=>{
 }
 
 export const fetchListing = (listingId) => async(dispatch)=> {
-    const response = await csrfFetch(`api/listings/${listingId}`)
+    const response = await csrfFetch(`/api/listings/${listingId}`)
     if (response.ok){
         const listing = await response.json();
         dispatch(setListing(listing))

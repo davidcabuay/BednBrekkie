@@ -32,8 +32,8 @@ ApplicationRecord.transaction do
         }) 
     end
 
-    5.times do 
-        Listing.create!({
+    # 5.times do 
+        Listing.create!(
         # username: Faker::Internet.unique.username(specifier: 3),
         host_id: 1,
         price: 500,
@@ -45,8 +45,35 @@ ApplicationRecord.transaction do
         num_of_bedrooms: 2,
         num_of_baths: 2,
         num_of_beds: 2
-        }) 
-    end
+        ) 
+    # end
     
+    Listing.create!(
+        # username: Faker::Internet.unique.username(specifier: 3),
+        host_id: 2,
+        price: 300,
+        title: '1 bedroom house', 
+        description: '2 bed 1 bath',
+        address: 'Hastings',
+        city: 'Vancouver',
+        num_of_guests: 2,
+        num_of_bedrooms: 1,
+        num_of_baths: 2,
+        num_of_beds: 1
+        ) 
+
+        Listing.create!(
+            # username: Faker::Internet.unique.username(specifier: 3),
+            host_id: 3,
+            price: 300,
+            title: '4 bedroom house', 
+            description: '5 bed 3 bath',
+            address: 'Kitsilano',
+            city: 'Vancouver',
+            num_of_guests: 8,
+            num_of_bedrooms: 4,
+            num_of_baths: 3,
+            num_of_beds: 6
+            ) 
     puts "Done!"
 end
