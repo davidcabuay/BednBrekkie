@@ -1,7 +1,7 @@
 import csrfFetch from './csrf';
 
-export const SET_LISTING = 'listing/SET_LISTING'
-export const SET_LISTINGS = 'listing/SET_LISTINGS'
+export const SET_RESERVATION = 'reservation/SET_RESERVATION'
+export const SET_RESERVATIONS = 'reservation/SET_RESERVATION'
 
 const setListing = (listing) => {
     return {

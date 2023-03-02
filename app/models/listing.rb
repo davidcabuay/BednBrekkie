@@ -22,4 +22,9 @@ class Listing < ApplicationRecord
   belongs_to :host,
   foreign_key: :host_id,
   class_name: :User
+
+  has_many :reservations,
+    foreign_key: :listing_id,
+    class_name: :Reservation,
+    dependent: destroy
 end

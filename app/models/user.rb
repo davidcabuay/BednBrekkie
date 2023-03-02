@@ -19,6 +19,11 @@ class User < ApplicationRecord
     class_name: :Listing,
     dependent: :destroy
 
+    has_many :reservations,
+    foreign_key: :booker_id,
+    class_name: :Reservation,
+    dependent: destroy
+
     has_secure_password
 
     before_validation :ensure_session_token
