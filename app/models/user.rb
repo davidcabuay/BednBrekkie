@@ -22,7 +22,7 @@ class User < ApplicationRecord
     has_many :reservations,
     foreign_key: :booker_id,
     class_name: :Reservation,
-    dependent: destroy
+    dependent: :destroy
 
     has_secure_password
 

@@ -1,8 +1,8 @@
 class Api::ReservationsController < ApplicationController
-    before_action :set_reservation, only:[:show, :update, :destroy]
+    before_action require_logged_in, only:[:create, :update, :destroy]
+    
     def index
         @reservations = Reservation.all
-
     end
     
     def create
@@ -38,7 +38,7 @@ class Api::ReservationsController < ApplicationController
         render json: ['Post not found'], status: :not_found
     end
 
-    def listing_params
+    def reservation_params
         params.require(:reservation).permit(:listing_id, :booker_id, :check_in, :check_out, :num_of_guests)
     end
 end

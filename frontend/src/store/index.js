@@ -2,10 +2,12 @@ import { legacy_createStore, combineReducers, applyMiddleware, compose } from "r
 import thunk from "redux-thunk";
 import session from "./session";
 import listings from "./listing";
+import reservations from "./reservation"
 
 export const rootReducer = combineReducers({
     session,
-    listings
+    listings,
+    reservations
 })
 
 

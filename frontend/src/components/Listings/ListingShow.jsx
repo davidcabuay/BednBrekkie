@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { getListing, fetchListing } from "../../store/listing";
 import placeholderImg from './bruno.png';
 import './listingShow.css'
+import ReservationForm from "../Reservations/ReservationForm";
 
 export default function ListingShow(){
     const dispatch = useDispatch();
@@ -15,8 +16,11 @@ export default function ListingShow(){
         dispatch(fetchListing(listingId))
     }, [dispatch, listingId])
     
-    if (!listing) return null;
-    console.log(listing)
+    
+    if (!listing) {
+        return null
+    }else{
+    
     return(
         <>
             <div className="showpage">
@@ -51,10 +55,11 @@ export default function ListingShow(){
                         <div className="reviewsection"> Review Section Placeholder</div>
                     </div>
                     <div className="rightcontainer">
+                        <ReservationForm listing={listing}/>
                         <div className="reservation">
-                            <div>${listing.price} night</div>
+                            {/* <div>${listing.price} night</div>
                             <div>calendar placeholder</div>
-                            <div>reservation placeholder</div>
+                            <div>reservation placeholder</div> */}
                         </div>
                     </div>
                 </div>
@@ -63,4 +68,7 @@ export default function ListingShow(){
             </div>
         </>
     )
+
+    }
+
 }

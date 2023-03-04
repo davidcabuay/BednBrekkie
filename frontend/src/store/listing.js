@@ -54,6 +54,7 @@ const listingsReducer = (state= {}, action) =>{
         case SET_LISTING:
             const newState = {...state};
             const listing = action.listing;
+            console.log(listing)
             newState[listing.id] = listing;
             return newState;
         default:

@@ -1,0 +1,106 @@
+.reservationform{
+    margin-top: 20px;
+    margin-right: 1.8vw;
+    height: 448px;
+    width: 284px;
+    padding: 24px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.bigbold{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.react-calendar { 
+    width: 400px;
+    max-width: 100%;
+    background-color: #fff;
+    color: #222;
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+}
+
+.react-calendar__navigation button {
+    color: #6f48eb;
+    min-width: 44px;
+    background: none;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.guestChanger {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-left: 50px;
+    /* padding: 10px; */
+}
+
+.guestForm {
+    display: flex;
+    justify-content: space-between;
+    height: 24px;
+    padding-top: 10px;
+    width: 90%;
+    margin-left: 20px;
+    
+}
+
+.reservebutton{
+    width: 242px;
+    height: 48px;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color:#d70466 ;
+    color: aliceblue;
+    border: none;
+}
+
+.reservebutton:hover {
+    background-color:#e61e4d;
+}
+
+.rbtndiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.formcontainer {
+    margin: 0;
+    width: 100%;
+}
+
+.costcontainer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.totalprice {
+    border-top: solid 1px lightgray;
+    font-size: larger;
+}
+
+.listprice {
+    font-size: larger;
+}
+
+.calendarcontainer{
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* width: 222.98px; */
+}

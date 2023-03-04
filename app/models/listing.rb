@@ -26,5 +26,5 @@ class Listing < ApplicationRecord
   has_many :reservations,
     foreign_key: :listing_id,
     class_name: :Reservation,
-    dependent: destroy
+    dependent: :destroy
 end

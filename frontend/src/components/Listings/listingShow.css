@@ -3,13 +3,20 @@
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
 
+.title{
+    margin-left: 2vw;
+}
+
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 20vw);
     grid-template-rows: repeat(2,220px) ;
     justify-content: center;
-    gap: 10px;
+    /* gap: 10px; */
     grid-gap: 10px;
+    margin: 0 7vw;
 }
 .big-img {
     grid-column-start: 1;
@@ -113,12 +120,14 @@ h3{
 .leftcontainer {
     width: 50vw;
     margin-right: 10px;
+    margin-left: 1vw;
     
 }
 
 .titledesc {
     padding: 5px 0 12px 0 ;
     font-size: 14px;
+    margin-left: 2vw;
 }
 
 .title {
