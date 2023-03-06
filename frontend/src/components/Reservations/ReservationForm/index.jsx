@@ -1,15 +1,18 @@
 import {useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; 
+// import { useNavigate } from 'react-router-dom'; 
 import { useDispatch, useSelector } from 'react-redux';
 import { getReservation, fetchReservation, createReservation, updateReservation } from '../../../store/reservation';
 import { getListing, fetchListing } from '../../../store/listing';
 import './reservationform.css'
 import Calendar from '../../Calendar';
+import ReservationIndex from '../ReservationIndex';
+
 
 
 
 export default function ReservationForm({listing}){
     const dispatch = useDispatch();
+    // const navigate = useNavigate();
     // const {reservationId, listingId} = useParams();
     // const formType = reservationId ? 'Update Reservation' : 'New Reservation'
     // if (!reservation){
@@ -52,8 +55,8 @@ export default function ReservationForm({listing}){
         e.preventDefault();
         if(sessionUser){
         const resData = {listing_id: listing.id, booker_id: sessionUser.id, check_in: checkIn, check_out: checkOut, num_of_guests: numGuest}
-        dispatch(createReservation(resData))  
-        console.log(resData)
+        dispatch(createReservation(resData)) ; 
+        window.location.href = '/reservations'
         }
     }
 

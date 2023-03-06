@@ -28,6 +28,11 @@ export default function ProfileButton({user}){
         dispatch(sessionActions.logout());
     };
 
+    const reservationPage = (e) => {
+        e.preventDefault();
+        window.location.href = '/reservations'
+    }
+
     return(
         <>
             <AccountCircleRoundedIcon className='profileicon' onClick={openMenu}/>
@@ -36,7 +41,7 @@ export default function ProfileButton({user}){
             {showMenu && (
                 <div className='dropdown-context'>
                 <ul className = "profile-dropdown">
-                    <li className='dropdown-list'>{user.email}</li>
+                    <li className='dropdown-list' onClick={reservationPage}>{user.email}</li>
                     <li className='dropdown-list' onClick={logout}>Log Out</li>
                 </ul>
                 </div>
