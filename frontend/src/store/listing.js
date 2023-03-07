@@ -43,10 +43,6 @@ export const fetchListing = (listingId) => async(dispatch)=> {
 }
 
 
-// const initialState = { 
-//     user: JSON.parse(sessionStorage.getItem("listings"))
-// };
-
 const listingsReducer = (state= {}, action) =>{
     switch (action.type) {
         case SET_LISTINGS:
@@ -54,7 +50,6 @@ const listingsReducer = (state= {}, action) =>{
         case SET_LISTING:
             const newState = {...state};
             const listing = action.listing;
-            console.log(listing)
             newState[listing.id] = listing;
             return newState;
         default:

@@ -6,33 +6,28 @@ import { getListing, fetchListing } from '../../../store/listing';
 import './reservationform.css'
 import Calendar from '../../Calendar';
 import ReservationIndex from '../ReservationIndex';
-
+import { useHistory } from 'react-router-dom';
+import { Modal } from '../../../context/Modal';
+import LoginFormModal from '../../LoginFormModal';
+import SignupFormModal from '../../SignupFormModal';
 
 
 
 export default function ReservationForm({listing}){
     const dispatch = useDispatch();
-    // const navigate = useNavigate();
-    // const {reservationId, listingId} = useParams();
-    // const formType = reservationId ? 'Update Reservation' : 'New Reservation'
-    // if (!reservation){
-    //     reservation = {checkIn: Date(), checkOut:  Date(), numOfGuests: 1}
-    // }
+    const history = useHistory();
     
-    
-
-
+    const [loginModal, setLoginModal] = useState(false);
+    const [signupModal, setSignupModal] = useState(false);
 
     useEffect(()=>{
-        // if(reservationId){
-        //     dispatch(fetchReservation(reservationId));
-            dispatch(fetchListing(listing.id))
-        
+            dispatch(fetchListing(listing.id)) 
     }, [dispatch, listing.id])
 
     const [checkIn, setCheckIn] = useState()
     const [checkOut, setCheckOut] = useState()
     const [numGuest, setNumGuest] = useState(1)
+    const [overbookModal, setOverbookModal] = useState(false)
 
     const maxguest = listing.numOfGuests;
 
@@ -50,13 +45,22 @@ export default function ReservationForm({listing}){
     }
 
     const sessionUser = useSelector(state => state.session.user)
-
-    const handleSubmit = (e) => {
+    const buttonType = sessionUser ? 'Reserve' : 'Sign In Required'
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if(sessionUser){
-        const resData = {listing_id: listing.id, booker_id: sessionUser.id, check_in: checkIn, check_out: checkOut, num_of_guests: numGuest}
-        dispatch(createReservation(resData)) ; 
-        window.location.href = '/reservations'
+            const resData = {
+                listing_id: listing.id, 
+                booker_id: sessionUser.id, 
+                check_in: checkIn, 
+                check_out: checkOut, 
+                num_of_guests: numGuest}
+            try{
+                await dispatch(createReservation(resData)) ; 
+                history.push('/reservations')
+            }catch(error){
+                setOverbookModal(true);
+            }
         }
     }
 
@@ -72,7 +76,7 @@ export default function ReservationForm({listing}){
 
     const totalPrice = basePrice + cleaningFee + bnbFee;
     
-    console.log(lengthOfStay)
+
 
     let costContainer;
         if (lengthOfStay>0) {
@@ -121,7 +125,16 @@ export default function ReservationForm({listing}){
                     </div>
                 </div>
                 <div className='rbtndiv' >
-                    <button className='reservebutton'>Reserve</button>
+                    {/* <button className='reservebutton'>{buttonType}</button> */}
+                    {(sessionUser) ? <button className='reservebutton'>{buttonType}</button> : <LoginFormModal loginModal={loginModal}
+                    setLoginModal={setLoginModal}
+                    setSignupModal={setSignupModal}/> }
+                    {overbookModal && (
+                        <Modal>
+                            <p> Too late! Your requested dates for this listing have already been booked. Please select new check-in and checkout dates.</p>
+                            <button onClick={()=> setOverbookModal(false)}>Close</button>
+                        </Modal>
+                    )}
                 </div>
             </form>
             {costContainer}

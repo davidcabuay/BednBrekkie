@@ -112,3 +112,15 @@ input:not(:focus):valid ~ .floating-label5{
     transition: 0.2s ease all;
     color: grey;
 }
+
+.logmodalbutton{
+    width: 242px;
+    height: 48px;
+    border-radius: 5px;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color:#d70466 ;
+    color: aliceblue;
+    border: none;
+}

@@ -1,13 +1,16 @@
 import csrfFetch from './csrf';
 
+
 export const SET_RESERVATION = 'reservation/SET_RESERVATION'
 export const SET_RESERVATIONS = 'reservation/SET_RESERVATIONS'
 export const REMOVE_RESERVATION = 'reservation/REMOVE_RESERVATION'
 
-const setReservation = (reservation) => {
+const setReservation = (payload) => {
     return {
         type: SET_RESERVATION,
-        reservation
+        // reservation
+        payload
+        
     }
 }
 
@@ -81,9 +84,6 @@ export const deleteReservation = (reservationId) => async(dispatch) => {
         dispatch(removeReservation(reservationId))
     }
 }
-// const initialState = { 
-//     user: JSON.parse(sessionStorage.getItem("reservations"))
-// };
 
 const reservationsReducer = (state= {}, action) =>{
     const newState = {...state};
@@ -91,7 +91,8 @@ const reservationsReducer = (state= {}, action) =>{
         case SET_RESERVATIONS:
             return action.reservations;
         case SET_RESERVATION:
-            const reservation = action.reservation;
+            // return {...newState, [action.payload.reservation.id] : action.payload.reservation}
+            const reservation = action.payload.reservation;
             newState[reservation.id] = reservation;
             return newState;
         case REMOVE_RESERVATION:

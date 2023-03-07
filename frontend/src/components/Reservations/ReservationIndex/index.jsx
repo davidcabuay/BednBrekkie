@@ -13,7 +13,6 @@ export default function ReservationIndex(){
     let userReservations = allReservations.filter(reservation =>
         reservation.bookerId === sessionUser.id
     )
-        console.log(userReservations)
     useEffect(()=>{
         dispatch(fetchReservations())
     }, [dispatch])

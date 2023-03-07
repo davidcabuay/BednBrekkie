@@ -3,10 +3,12 @@ import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import './Navigation.css'
+import { useHistory } from 'react-router-dom';
 
 export default function ProfileButton({user}){
     const dispatch = useDispatch();
     const [showMenu, setShowMenu] = useState(false);
+    const history = useHistory();
 
     const openMenu= () => {
         if (showMenu) return;
@@ -26,11 +28,12 @@ export default function ProfileButton({user}){
     const logout = (e) => {
         e.preventDefault();
         dispatch(sessionActions.logout());
+        history.push('/')
     };
 
     const reservationPage = (e) => {
         e.preventDefault();
-        window.location.href = '/reservations'
+        history.push('/reservations')
     }
 
     return(

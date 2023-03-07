@@ -1,6 +1,7 @@
 class Api::ReservationsController < ApplicationController
-    # before_action require_logged_in, only:[:create, :update, :destroy]
-    
+    # before_action set_reservation
+    # wrap_paramaters include: Reservation.attribute_names + 
+
     def index
         @reservations = Reservation.all
     end
@@ -9,7 +10,9 @@ class Api::ReservationsController < ApplicationController
         check_in = params[:check_in]
         check_out = params[:check_out]
 
-        overbooking = Reservation.where("((check_in <= ? AND check_out > ?) OR (check_in >= ? AND check_in < ?))", check_in, check_in, check_in, check_out)
+        overbooking = Reservation
+        .where(listing_id: params[:listing_id])
+        .where("((check_in <= ? AND check_out > ?) OR (check_in >= ? AND check_in < ?))" , check_in, check_in, check_in, check_out)
 
         if overbooking.any?
             render json: {errors: "Your requested dates have already been booked"}, status: unprocessable_entity
@@ -28,7 +31,9 @@ class Api::ReservationsController < ApplicationController
     end
 
     def update
-        if @reservation.update(listing_params)
+        # debugger
+        @reservation = Reservation.find(params[:id])
+        if @reservation.update(reservation_params)
             render :show
         else
             render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
@@ -36,18 +41,15 @@ class Api::ReservationsController < ApplicationController
     end
 
     def destroy
+        @reservation = Reservation.find(params[:id])
         @reservation.destroy
     end
     
-    private
 
-    def set_reservation
-        @reservation = Reservation.find(params[:id])
-    rescue
-        render json: ['Post not found'], status: :not_found
-    end
+
+private
 
     def reservation_params
-        params.require(:reservation).permit(:listing_id, :booker_id, :check_in, :check_out, :num_of_guests)
+        params.require(:reservation).permit(:id, :listing_id, :booker_id, :check_in, :check_out, :num_of_guests)
     end
 end
