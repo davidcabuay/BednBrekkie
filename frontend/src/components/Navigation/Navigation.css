@@ -32,5 +32,36 @@ ul:hover{
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15)
 }
 
+.search-input {
+    border-radius: 10px;
+    height: 25px;
+}
+
+.searh-bar {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.searchbutton{
+    background-color:#d70466 ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
+    border-radius: 8px;
+    height: 25px;
+    color: aliceblue;
+    border-color: transparent;
+    /* width: 185px; */
+    cursor: pointer;
+    margin-left: 5px;
+}
+.searchbutton:hover {
+    background-color:#e61e4d;
+}

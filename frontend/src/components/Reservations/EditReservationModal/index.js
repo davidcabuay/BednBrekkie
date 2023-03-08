@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { fetchListing, getListing } from "../../../store/listing";
 import { fetchReservation, getReservation } from "../../../store/reservation";
 import { useSelector } from "react-redux";
+import './edit.css'
 
 export default function EditReservationModal({reservation, numOfGuests, onCancel}){
     const dispatch = useDispatch();
@@ -43,15 +44,15 @@ export default function EditReservationModal({reservation, numOfGuests, onCancel
     }
 
     return(
-        <div>
-            <div>Number of Guests</div>
+        <div className="editmodal">
+            <div className="edittext">Number of Guests</div>
             <div className='guestChanger'>
                 <button onClick={subtractGuest}>-</button>
                 <div>{numGuest}</div>
                 <button onClick={addGuest}>+</button>
             </div>
-            <button onClick={onCancel}>Cancel</button>
-            <button onClick={handleEdit}>Confirm</button>
+            <button className="cancelbutton" onClick={onCancel}>Cancel</button>
+            <button className="editbutton1" onClick={handleEdit}>Confirm</button>
         </div>
     )
 }

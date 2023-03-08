@@ -1,3 +1,4 @@
+import WifiRoundedIcon from '@mui/icons-material/WifiRounded';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
@@ -28,6 +29,7 @@ export default function ListingShow(){
                 <div className="titledesc"> 1 Review {listing.address}, {listing.city}</div>
 
                 <div className="grid-container">
+                    {/* <div className="big-img"><img src={listing.photoUrls[0]} alt="house" /></div> */}
                     <div className="big-img"><img src={tempImg} alt='placeholder' /></div>
                     <div className="topleft-img"><img src={tempImg} alt='placeholder' /></div>
                     <div className="topright-img"><img src={tempImg} alt='placeholder' /></div>
@@ -46,7 +48,7 @@ export default function ListingShow(){
                         </div>
                         <div className="extras">
                             <h3>What this place offers</h3>
-                            <div> Lake view</div>
+                            <div><WifiRoundedIcon/> Lake view</div>
                             <div> Mountain View</div>
                             <div> Kitchen</div>
                             <div> Wifi</div>

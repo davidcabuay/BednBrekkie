@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&family=Roboto&display=swap');
 
-h3 {
-    font-family: Roboto;
-    text-align: center;
-}
 
 form {
     width: 200px;
-    font-family: Roboto;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
+}
+
+.welcome {
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.input-boxesL {
+    margin-top: 100px;
 }
 
 .logininput {
@@ -34,9 +38,9 @@ form {
 .loginwrapper {
     height: 450px;
     width: 300px;
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column; */
     /* border-radius: 0px; */
 }
 
@@ -45,13 +49,15 @@ form {
     transition: opacity 1.25s;
     background-image: radial-gradient( circle at center,var(--ihf-tp-q) 0%,#e61e4d 27.5%,#e31c5f 40%,#d70466 57.5%,#bd1e59 75%,#bd1e59 100% ); */
     background-color:#d70466 ;
-    font-family: Roboto;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
     border-radius: 8px;
     height: 36px;
     color: aliceblue;
     border-color: transparent;
     width: 185px;
     cursor: pointer;
+    margin-top: 89px;
+    margin-bottom: 20px;
     /* padding-top: 20px; */
 }
 
@@ -68,10 +74,11 @@ form {
 .error-list {
     list-style-type: square;
     font-size: small;
-    font-family: Roboto;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
     top: -140px;
     position: relative;
     width: 250px;
+    margin-left: 30px;
 }
 
 .buttondiv {
@@ -80,7 +87,7 @@ form {
 
 input:focus ~ .floating-label4,
 input:not(:focus):valid ~ .floating-label4{
-    top: 225px;
+    top: 210px;
     bottom: 10px;
     left: 98px;
     font-size: 11px;
@@ -91,14 +98,14 @@ input:not(:focus):valid ~ .floating-label4{
     position: absolute;
     pointer-events: none;
     left: 98px;
-    top: 235px;
+    top: 220px;
     transition: 0.2s ease all;
     color: grey;
 }
 
 input:focus ~ .floating-label5,
 input:not(:focus):valid ~ .floating-label5{
-    top: 270px;
+    top: 255px;
     bottom: 10px;
     left: 98px;
     font-size: 11px;
@@ -108,7 +115,7 @@ input:not(:focus):valid ~ .floating-label5{
     position: absolute;
     pointer-events: none;
     left: 98px;
-    top: 280px;
+    top: 265px;
     transition: 0.2s ease all;
     color: grey;
 }

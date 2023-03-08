@@ -2,15 +2,18 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-// import LoginFormModal from '../LoginFormModal';
+import LoginFormModal from '../LoginFormModal';
 import DropdownMenu from '../DropDown';
 import HomeIcon from '@mui/icons-material/Home';
+import SignupFormModal from '../SignupFormModal';
 
 
 import './Navigation.css';
 
+
 function Navigation(){
     const sessionUser = useSelector(state => state.session.user);
+    const modal = useSelector(state => state.ui.modal)
     
 
     let sessionLinks;
@@ -32,7 +35,17 @@ function Navigation(){
                 <NavLink className = 'Homelink' exact to="/">
                     <HomeIcon />
                 </NavLink>
+                <div className="search-bar">
+                    <input
+                        type="search"
+                        placeholder="Future Feature"
+                        className="search-input"
+                    />
+                    <button className='searchbutton'>Search</button>
+                </div>
                 <div className='sessionlink'>{sessionLinks}</div>
+                {modal === 'login' && <LoginFormModal/>}
+                {modal === 'signup' && <SignupFormModal/>}
         </div>
     );
 }

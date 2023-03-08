@@ -2,10 +2,13 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
+
+require "open-uri"
+
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
@@ -32,161 +35,312 @@ ApplicationRecord.transaction do
         }) 
     end
 
+    puts "Creating listings..."
     # 5.times do 
-        Listing.create!(
-        # username: Faker::Internet.unique.username(specifier: 3),
+    listing1 = Listing.create!(
+
         host_id: 1,
-        price: 500,
-        title: '2 bedroom house', 
-        description: '2 bed 2 bath',
-        address: 'Granville',
-        city: 'Vancouver',
-        num_of_guests: 2,
-        num_of_bedrooms: 2,
+        price: 579,
+        title: 'Oceanfront Coastal Home with Breathtaking Views', 
+        description: 'Come discover this nature-filled coastal getaway, peaceful retreat, or an oceann front home base from which to explore the coast.',
+        address: 'Moss Beach',
+        city: 'California',
+        num_of_guests: 8,
+        num_of_bedrooms: 3,
         num_of_baths: 2,
-        num_of_beds: 2
+        num_of_beds: 4
         ) 
     # end
+    listing1.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing1main.jpg"), filename: "listing1main.jpg")
+    listing1.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing1_1.jpg"), filename: "listing1_1.jpg")
+    listing1.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing1_2.jpg"), filename: "listing1_2.jpg")
+    listing1.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing1_3.jpg"), filename: "listing1_3.jpg")
+    listing1.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing1_4.jpg"), filename: "listing1_4.jpg")
     
-    Listing.create!(
-        # username: Faker::Internet.unique.username(specifier: 3),
+    listing2 = Listing.create!(
+
         host_id: 2,
-        price: 300,
-        title: '1 bedroom house', 
-        description: '2 bed 1 bath',
-        address: 'Hastings',
-        city: 'Vancouver',
-        num_of_guests: 2,
-        num_of_bedrooms: 1,
-        num_of_baths: 2,
-        num_of_beds: 1
+        price: 916,
+        title: 'Seamist Beach Cottage, Private Beach & Ocean views', 
+        description: 'The beach cottage is built on the bluff over looking a spectacular show of nature at her best. The property has private stairs down to a sheltered, secluded beach. You can have beach fun and family time exploring tide pools or a romantic, quiet picnic...Just the two of you and the ocean.',
+        address: 'Bodega Bay',
+        city: 'California',
+        num_of_guests: 4,
+        num_of_bedrooms: 2,
+        num_of_baths: 1,
+        num_of_beds: 3
         ) 
 
-    Listing.create!(
-            # username: Faker::Internet.unique.username(specifier: 3),
+    listing2.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing2main.jpg"), filename: "listing2main.jpg")
+    listing2.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing2_1.jpg"), filename: "listing2_1.jpg")
+    listing2.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing2_2.jpg"), filename: "listing2_2.jpg")
+    listing2.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing2_3.jpg"), filename: "listing2_3.jpg")
+    listing2.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing2_4.jpg"), filename: "listing2_4.jpg")
+
+    listing3 = Listing.create!(
         host_id: 3,
-        price: 300,
-        title: '4 bedroom house', 
-        description: '5 bed 3 bath',
-        address: 'Kitsilano',
-        city: 'Vancouver',
+        price: 603,
+        title: 'Forest Getaway', 
+        description: 'The house is surrounded by redwoods and ferns and has two large decks, one with a propane firepit with ample seating, the other with a hot tub. Hiking trails take you in minutes to the Gualala River and a sunny picnic area known as the Hot Spot.',
+        address: 'Sea Ranch',
+        city: 'California',
+        num_of_guests: 4,
+        num_of_bedrooms: 1,
+        num_of_baths: 1,
+        num_of_beds: 2
+        ) 
+
+    listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3main.jpg"), filename: "listing3main.jpg")
+    listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3_1.jpg"), filename: "listing3_1.jpg")
+    listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3_2.jpg"), filename: "listing3_2.jpg")
+    listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3_3.jpg"), filename: "listing3_3.jpg")
+    listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3_4.jpg"), filename: "listing3_4.jpg")
+    
+    listiing4 = Listing.create!(
+        host_id: 4,
+        price: 403,
+        title: 'Magical & Romantic Beachfront Home at Pajaro Dunes', 
+        description: 'Feel the romance the moment you walk in the door. Electric fireplace takes the chill off the winter days and makes for a great place to read or write. Need a break from work? You will find it here.',
+        address: 'Watsonville',
+        city: 'California',
+        num_of_guests: 4,
+        num_of_bedrooms: 2,
+        num_of_baths: 2,
+        num_of_beds: 6
+        ) 
+
+    listing4.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing4main.jpg"), filename: "listing4main.jpg")
+    listing4.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing4_1.jpg"), filename: "listing4_1.jpg")
+    listing4.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing4_2.jpg"), filename: "listing4_2.jpg")
+    listing4.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing4_3.jpg"), filename: "listing4_3.jpg")
+    listing4.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing4_4.jpg"), filename: "listing4_4.jpg")
+
+    listing5 = Listing.create!(
+        host_id: 5,
+        price: 585,
+        title: 'Ocean Mountain View Home', 
+        description: "Guests will enjoy the privacy of being the only residence on the premises, situated on an oversized lot nestled conveniently next to one of the largest undeveloped pieces of land in the area. Easy access to miles of pristine golden sand beaches, trails traversing a variety of natural surroundings with Pacific Ocean vistas on one side and some of California's most amazing coastal views on the other. ",
+        address: 'Montara',
+        city: 'California',
         num_of_guests: 8,
+        num_of_bedrooms: 3,
+        num_of_baths: 3,
+        num_of_beds: 6
+        )
+        
+    listing5.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing5main.jpg"), filename: "listing5main.jpg")
+    listing5.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing5_1.jpg"), filename: "listing5_1.jpg")
+    listing5.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing5_2.jpg"), filename: "listing5_2.jpg")
+    listing5.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing5_3.jpg"), filename: "listing5_3.jpg")
+    listing5.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing5_4.jpg"), filename: "listing5_4.jpg")
+
+    listing6 = Listing.create!(
+        host_id: 6,
+        price: 996,
+        title: '180° OceanView and HotTub', 
+        description: 'This is a historic beach home, truly one of a kind. Beautiful wood work throughout and stunning views from every part of the house. Master bedroom with soaking tub built into the corner of the room. Light a fire in the gas fireplace in your room and draw a bath from which you can see the ocean and watch the moonrise over the water.',
+        address: 'Santa Cruz',
+        city: 'California',
+        num_of_guests: 8,
+        num_of_bedrooms: 3,
+        num_of_baths: 3,
+        num_of_beds: 4
+        ) 
+
+    listing6.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing6main.jpg"), filename: "listing6main.jpg")
+    listing6.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing6_1.jpg"), filename: "listing6_1.jpg")
+    listing6.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing6_2.jpg"), filename: "listing6_2.jpg")
+    listing6.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing6_3.jpg"), filename: "listing6_3.jpg")
+    listing6.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing6_4.jpg"), filename: "listing6_4.jpg")    
+
+    listing7 = Listing.create!(
+        host_id: 7,
+        price: 809,
+        title: 'Oceanfront Beach House', 
+        description: 'Our beautiful beach home is the perfect place for a family vacation. The gated/private front patio is equipped with a bbq grill and a shaded conversation/dining set.',
+        address: 'Moss Landing',
+        city: 'California',
+        num_of_guests: 7,
+        num_of_bedrooms: 3,
+        num_of_baths: 3,
+        num_of_beds: 4
+        ) 
+
+    listing7.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing7main.jpg"), filename: "listing7main.jpg")
+    listing7.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing7_1.jpg"), filename: "listing7_1.jpg")
+    listing7.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing7_2.jpg"), filename: "listing7_2.jpg")
+    listing7.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing7_3.jpg"), filename: "listing7_3.jpg")
+    listing7.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing7_4.jpg"), filename: "listing7_4.jpg")
+
+    listing8 = Listing.create!(
+        host_id: 8,
+        price: 838,
+        title: 'Ocean View Spa House', 
+        description: 'Beautiful home in quiet residential cul-de-sac with sweeping ocean and hillside views in the Bodega Bay. Perfect for a quiet relaxing spa-like experience. Fitted with a hot tub, sauna and BBQ, beach access, this home makes for a perfect vacation escape with friends or family!',
+        address: 'Bodega Bay',
+        city: 'California',
+        num_of_guests: 12,
         num_of_bedrooms: 4,
         num_of_baths: 3,
         num_of_beds: 6
-    ) 
-    Listing.create!(
-        # username: Faker::Internet.unique.username(specifier: 3),
-    host_id: 4,
-    price: 400,
-    title: '5 bedroom house', 
-    description: '6 bed 3 bath',
-    address: 'Seymour',
-    city: 'Vancouver',
-    num_of_guests: 8,
-    num_of_bedrooms: 4,
-    num_of_baths: 3,
-    num_of_beds: 6
-) 
+        ) 
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 5,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing8.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing8main.jpg"), filename: "listing8main.jpg")
+    listing8.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing8_1.jpg"), filename: "listing8_1.jpg")
+    listing8.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing8_2.jpg"), filename: "listing8_2.jpg")
+    listing8.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing8_3.jpg"), filename: "listing8_3.jpg")
+    listing8.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing8_4.jpg"), filename: "listing8_4.jpg")
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 6,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing9 = Listing.create!(
+        host_id: 9,
+        price: 513,
+        title: 'Near Harbor and Steps to the Beach', 
+        description: 'This unique beach house is one block from Twin Lakes beach, the finest one in Santa Cruz! It is a 2-story, designer home with an open floorplan, gridwork of glass to allow in plenty of light and offers ocean peeks. ',
+        address: 'Santa Cruz',
+        city: 'California',
+        num_of_guests: 6,
+        num_of_bedrooms: 2,
+        num_of_baths: 1,
+        num_of_beds: 4
+        )
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 7,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing9.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing9main.jpg"), filename: "listing9main.jpg")
+    listing9.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing9_1.jpg"), filename: "listing9_1.jpg")
+    listing9.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing9_2.jpg"), filename: "listing9_2.jpg")
+    listing9.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing9_3.jpg"), filename: "listing9_3.jpg")
+    listing9.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing9_4.jpg"), filename: "listing9_4.jpg")
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 8,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing10 = Listing.create!(
+        host_id: 10,
+        price: 1223,
+        title: 'Spectacular Oceanfront Home', 
+        description: 'Positioned on the oceanfront, this 3,000+ sq. ft home has one of the most spectacular views along the coastline and is situated on one of the most private stretches of beach in Monterey Bay.',
+        address: 'Watsonville',
+        city: 'California',
+        num_of_guests: 12,
+        num_of_bedrooms: 4,
+        num_of_baths: 4,
+        num_of_beds: 8
+        ) 
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 9,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing10.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing10main.jpg"), filename: "listing10main.jpg")
+    listing10.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing10_1.jpg"), filename: "listing10_1.jpg")
+    listing10.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing10_2.jpg"), filename: "listing10_2.jpg")
+    listing10.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing10_3.jpg"), filename: "listing10_3.jpg")
+    listing10.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing10_4.jpg"), filename: "listing10_4.jpg")
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 10,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing11 = Listing.create!(
+        host_id: 11,
+        price: 991,
+        title: 'Fantastic, Private Beach House!', 
+        description: 'This is a sunny, spacious beach house with gorgeous decks that open on to the best family and surfing beach in Santa Cruz. Step out of the surf and into the hot tub to enjoy your private view of the park, lagoon, beach and ocean.',
+        address: 'Santa Cruz',
+        city: 'California',
+        num_of_guests: 8,
+        num_of_bedrooms: 3,
+        num_of_baths: 2,
+        num_of_beds: 5
+        ) 
+    
+    listing11.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing11main.jpg"), filename: "listing11main.jpg")
+    listing11.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing11_1.jpg"), filename: "listing11_1.jpg")
+    listing11.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing11_2.jpg"), filename: "listing11_2.jpg")
+    listing11.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing11_3.jpg"), filename: "listing11_3.jpg")
+    listing11.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing11_4.jpg"), filename: "listing11_4.jpg")
 
-Listing.create!(
-    # username: Faker::Internet.unique.username(specifier: 3),
-host_id: 11,
-price: 300,
-title: '4 bedroom house', 
-description: '5 bed 3 bath',
-address: 'Kitsilano',
-city: 'Vancouver',
-num_of_guests: 8,
-num_of_bedrooms: 4,
-num_of_baths: 3,
-num_of_beds: 6
-) 
+    listing12 = Listing.create!(
+        host_id: 12,
+        price: 497,
+        title: 'Sunny Beach Cottage with Amazing Views', 
+        description: 'Perched just above the village of Stinson Beach, this beautiful light filled home has lovely ocean and mountain views throughout, and 2 spacious bedrooms on separate floors, each with ensuite bathrooms.',
+        address: 'Stinson Beach',
+        city: 'California',
+        num_of_guests: 4,
+        num_of_bedrooms: 2,
+        num_of_baths: 2,
+        num_of_beds: 4
+        ) 
+    
+    listing12.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing12main.jpg"), filename: "listing12main.jpg")
+    listing12.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing12_1.jpg"), filename: "listing12_1.jpg")
+    listing12.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing12_2.jpg"), filename: "listing12_2.jpg")
+    listing12.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing12_3.jpg"), filename: "listing12_3.jpg")
+    listing12.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing12_4.jpg"), filename: "listing12_4.jpg")
 
-                
+    listing13 = Listing.create!(
+        host_id: 13,
+        price: 678,
+        title: 'Whale Watch! Fantastic Views! Hot Tub! Game Room! Dog Friendly!', 
+        description: 'Located on the hill overlooking Dillon Beach, Whale Watch has phenomenal bay & ocean views and has been outfitted with every amenity your heart could desire, including brand new furnishings throughout! ',
+        address: 'Dillon Beach',
+        city: 'California',
+        num_of_guests: 10,
+        num_of_bedrooms: 3,
+        num_of_baths: 3,
+        num_of_beds: 6
+        ) 
+    
+    listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13main.jpg"), filename: "listing13main.jpg")
+    listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13_1.jpg"), filename: "listing13_1.jpg")
+    listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13_2.jpg"), filename: "listing13_2.jpg")
+    listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13_3.jpg"), filename: "listing13_3.jpg")
+    listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13_4.jpg"), filename: "listing13_4.jpg")
+
+    listign14 = Listing.create!(
+        host_id: 14,
+        price: 2049,
+        title: 'OnTheRocks•Architectural•Estate•Dramatic Ocean Views', 
+        description: 'OnTheRocks is a Frank Lloyd Wright inspired modern California Ranch w/ subtle Prairie & International architectural design; perched on a promontory overlooking cove w/ jaw dropping ocean views and mesmerizing - audible crashing white water waves.',
+        address: 'Jenner',
+        city: 'California',
+        num_of_guests: 6,
+        num_of_bedrooms: 3,
+        num_of_baths: 4,
+        num_of_beds: 3
+        ) 
+    
+    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14main.jpg"), filename: "listign14main.jpg")
+    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_1.jpg"), filename: "listign14_1.jpg")
+    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_2.jpg"), filename: "listign14_2.jpg")
+    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_3.jpg"), filename: "listign14_3.jpg")
+    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_4.jpg"), filename: "listign14_4.jpg")
+
+    listing15 = Listing.create!(
+        host_id: 15,
+        price: 219,
+        title: 'Charming Garden Apartment, Steps From The Beach', 
+        description: 'Imagine falling asleep to the sound of crashing waves. This clean, quiet garden apartment is perfect for the nature loving city dweller. Steps from the beach, Golden Gate Park, the Zoo and more.',
+        address: 'San Francisco',
+        city: 'California',
+        num_of_guests: 3,
+        num_of_bedrooms: 1,
+        num_of_baths: 1,
+        num_of_beds: 2
+        ) 
+    
+    listing15.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing15main.jpg"), filename: "listing15main.jpg")
+    listing15.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing15_1.jpg"), filename: "listing15_1.jpg")
+    listing15.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing15_2.jpg"), filename: "listing15_2.jpg")
+    listing15.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing15_3.jpg"), filename: "listing15_3.jpg")
+    listing15.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing15_4.jpg"), filename: "listing15_4.jpg")
+
+    listing16 = Listing.create!(
+        host_id: 16,
+        price: 779,
+        title: 'Gorgeous Oceanview, Shelter Cove, Oceanfront!', 
+        description: "It's all about peace, relaxation and listening to the waves while watching the stars on the milky way from the hot tub at night. If that's not your thing, we have premium DIRECTV with sports package, and Free Starlink high speed internet.",
+        address: 'Whitethorn',
+        city: 'California',
+        num_of_guests: 3,
+        num_of_bedrooms: 1,
+        num_of_baths: 1,
+        num_of_beds: 1
+        ) 
+    
+    listing16.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing16main.jpg"), filename: "listing16main.jpg")
+    listing16.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing16_1.jpg"), filename: "listing16_1.jpg")
+    listing16.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing16_2.jpg"), filename: "listing16_2.jpg")
+    listing16.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing16_3.jpg"), filename: "listing16_3.jpg")
+    listing16.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing16_4.jpg"), filename: "listing16_4.jpg")
     puts "Done!"
-end
+# end

@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
+import { showLoginModal } from "../../store/ui";
 import './SignupFormPage.css';
 
 
-function SignupForm(props) {
+function SignupForm() {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
     const [email, setEmail] = useState("");
@@ -15,8 +16,8 @@ function SignupForm(props) {
     const [errors, setErrors] = useState([]);
     // const [loginModal, setLoginModal] = useState(false);
     // const [signupModal, setSignupModal] = useState(true);
-    const setLoginModal = props.setLoginModal;
-    const setSignupModal = props.setSignupModal;
+    // const setLoginModal = props.setLoginModal;
+    // const setSignupModal = props.setSignupModal;
     
     if (sessionUser) return <Redirect to="/" />;
 
@@ -41,17 +42,17 @@ function SignupForm(props) {
         return setErrors(['Confirm Password field must be the same as the Password field']);
     };
     
-    const clickLogin = () => {
-        setSignupModal(false)
-        setLoginModal(true)
-    }
+    // const clickLogin = () => {
+    //     setSignupModal(false)
+    //     setLoginModal(true)
+    // }
 
     return (
         <>
         <form className='signupwrapper'onSubmit={handleSubmit}>
             <div>
-                <h4>Sign Up</h4>
-                <h3>Welcome to BednBrekkie</h3>
+                <div >Sign Up</div> 
+                <div className="welcome" >Welcome to BednBrekkie</div>
             </div>
             <div className="input-boxes">
                 <label>
@@ -90,7 +91,7 @@ function SignupForm(props) {
             </div>
             <div className="buttondiv">
                 <button className="signupbutton" type="submit">Sign Up</button>
-                <p onClick={clickLogin}>Already have an account? Click here to log in.</p>
+                <p onClick={()=> dispatch(showLoginModal())}>Already have an account? Click here to log in.</p>
             </div>
         </form>
             <ul className="error-list">

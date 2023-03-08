@@ -20,14 +20,18 @@
 }
 
 .item-text{
-    color: black;
+    color: grey;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     padding-top: 0;
     padding-left: 0;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 10px;
+    
 }
 
 .boldtext{
-    font-weight: bold;
+    color: black;
 }
 .item-img {
     height: 20vw;

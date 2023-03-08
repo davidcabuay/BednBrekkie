@@ -1,0 +1,35 @@
+.deletemodal {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    height: 50px;
+}
+
+.deletetext{
+    margin-bottom: 20px;
+}
+
+.cancelbutton {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 75px;
+    border: none;
+    border-radius: 8px;
+    height: 25px;
+}
+
+.deletebutton {
+    cursor: pointer;
+    background-color: #d70466;
+    border-radius: 8px;
+    border: none;
+    color: aliceblue;
+    height: 25px;
+    width: 75px;
+}
+
+.deletebutton:hover {
+    background-color:#e61e4d;
+}
+
+.cancelbutton:hover {
+    background-color: lightgrey;
+}

@@ -27,4 +27,6 @@ class Listing < ApplicationRecord
     foreign_key: :listing_id,
     class_name: :Reservation,
     dependent: :destroy
+
+    # has_many_attached :photos
 end

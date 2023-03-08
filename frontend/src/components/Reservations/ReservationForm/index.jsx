@@ -10,15 +10,13 @@ import { useHistory } from 'react-router-dom';
 import { Modal } from '../../../context/Modal';
 import LoginFormModal from '../../LoginFormModal';
 import SignupFormModal from '../../SignupFormModal';
+import { showLoginModal } from '../../../store/ui';
 
 
 
 export default function ReservationForm({listing}){
     const dispatch = useDispatch();
     const history = useHistory();
-    
-    const [loginModal, setLoginModal] = useState(false);
-    const [signupModal, setSignupModal] = useState(false);
 
     useEffect(()=>{
             dispatch(fetchListing(listing.id)) 
@@ -28,6 +26,7 @@ export default function ReservationForm({listing}){
     const [checkOut, setCheckOut] = useState()
     const [numGuest, setNumGuest] = useState(1)
     const [overbookModal, setOverbookModal] = useState(false)
+    const [noDateModal, setNoDateModal] = useState(false)
 
     const maxguest = listing.numOfGuests;
 
@@ -45,7 +44,7 @@ export default function ReservationForm({listing}){
     }
 
     const sessionUser = useSelector(state => state.session.user)
-    const buttonType = sessionUser ? 'Reserve' : 'Sign In Required'
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if(sessionUser){
@@ -59,7 +58,11 @@ export default function ReservationForm({listing}){
                 await dispatch(createReservation(resData)) ; 
                 history.push('/reservations')
             }catch(error){
-                setOverbookModal(true);
+                if (!lengthOfStay) {
+                    setNoDateModal(true);
+                }else{
+                    setOverbookModal(true);
+                }
             }
         }
     }
@@ -105,7 +108,7 @@ export default function ReservationForm({listing}){
 
     
     return(
-        <div className="reservationform">
+        <div className={lengthOfStay ? "reservationform" : 'smallreservation'}>
             <form className='formcontainer' onSubmit={handleSubmit}>
                 <div className='listprice'>${listing.price} night</div>
                 <div className='calendarcontainer'>
@@ -119,20 +122,27 @@ export default function ReservationForm({listing}){
                 <div className='guestForm'>
                     <div>Guests</div>
                     <div className='guestChanger'>
-                        <button onClick={subtractGuest}>-</button>
+                        <button className='guestbutton' onClick={subtractGuest}>-</button>
                         <div>{numGuest}</div>
-                        <button onClick={addGuest}>+</button>
+                        <button className='guestbutton' onClick={addGuest}>+</button>
                     </div>
                 </div>
                 <div className='rbtndiv' >
                     {/* <button className='reservebutton'>{buttonType}</button> */}
-                    {(sessionUser) ? <button className='reservebutton'>{buttonType}</button> : <LoginFormModal loginModal={loginModal}
-                    setLoginModal={setLoginModal}
-                    setSignupModal={setSignupModal}/> }
+                    {(sessionUser) ? <button className='reservebutton'>Reserve</button> : <button className='requireLoginButton' onClick={()=>dispatch(showLoginModal())}>Log in required</button> }
                     {overbookModal && (
                         <Modal>
-                            <p> Too late! Your requested dates for this listing have already been booked. Please select new check-in and checkout dates.</p>
-                            <button onClick={()=> setOverbookModal(false)}>Close</button>
+                            <p className='errorMessage'>Too late!</p>
+                            <p className='errorMessage'>It looks like your requested dates for this listing have already been booked.</p>
+                            <p className='errorMessage'>Kindly select new check-in and checkout dates.</p>
+                            <button className='errorButton' onClick={()=> setOverbookModal(false)}>Close</button>
+                        </Modal>
+                    )}
+                    {noDateModal && (
+                        <Modal>
+                            <p className='errorMessage'> Hey there!</p>
+                            <p className='errorMessage'> It looks like you forgot to select your check-in and checkout dates.</p>
+                            <button className='errorButton' onClick={()=> setNoDateModal(false)}>Close</button>
                         </Modal>
                     )}
                 </div>

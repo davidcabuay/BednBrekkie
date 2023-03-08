@@ -1,18 +1,19 @@
 import React, {useState, useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import { Modal } from '../../context/Modal';
-import LoginForm from '../LoginFormModal/LoginForm';
-import SignupForm from '../SignupFormModal/SignupForm';
+// import LoginForm from '../LoginFormModal/LoginForm';
+// import SignupForm from '../SignupFormModal/SignupForm';
 import { login } from '../../store/session';
 import MenuIcon from "@mui/icons-material/Menu";
+import { showSignupModal, showLoginModal } from '../../store/ui';
 import './dropdown.css';
 
 
 function DropdownMenu(){
     const dispatch = useDispatch();
     const [isOpen, setIsOpen] = useState(false);
-    const [loginModal, setLoginModal] = useState(false);
-    const [signupModal, setSignupModal] = useState(false);
+    // const [loginModal, setLoginModal] = useState(false);
+    // const [signupModal, setSignupModal] = useState(false);
 
     useEffect(()=>{
         if(!isOpen) return;
@@ -28,15 +29,15 @@ function DropdownMenu(){
         setIsOpen(!isOpen)
     }
 
-    const clickLogin = () => {
-        setIsOpen(!isOpen);
-        setLoginModal(!loginModal)
-    }
+    // const clickLogin = () => {
+    //     setIsOpen(!isOpen);
+    //     setLoginModal(!loginModal)
+    // }
 
-    const clickSignup = () => {
-        setIsOpen(!isOpen);
-        setSignupModal(!signupModal)
-    }
+    // const clickSignup = () => {
+    //     setIsOpen(!isOpen);
+    //     setSignupModal(!signupModal)
+    // }
 
     const demoLogin = (e) => {
         e.preventDefault();
@@ -50,14 +51,18 @@ function DropdownMenu(){
                 {isOpen && (
                     <div className='dropdown-context'>
                         <ul className='profile-dropdown'>
-                            <li className='dropdown-list' style={{fontWeight: "bold"}} onClick={clickSignup}>Sign Up</li>
-                            <li className='dropdown-list' onClick={clickLogin}>Log In</li>
+                            <li className='dropdown-list' style={{fontWeight: "bold"}} onClick={() => dispatch(showSignupModal())}>Sign Up</li>
+                            <li className='dropdown-list' onClick={() => dispatch(showLoginModal())}>Log In</li>
                             <li className='dropdown-list' onClick={demoLogin}>Demo</li>
+                            {/* <li className='dropdown-list' style={{fontWeight: "bold"}} onClick={clickSignup}>Sign Up</li> */}
+                            {/* <li className='dropdown-list' onClick={clickLogin}>Log In</li> */}
+                            {/* <li className='dropdown-list' onClick={demoLogin}>Demo</li> */}
+
                         </ul>
                     </div>
                 )}
             </div>
-            {loginModal && (
+            {/* {loginModal && (
                 <Modal onClose={()=> setLoginModal(false)}>
                     <LoginForm 
                     loginModal={loginModal}
@@ -73,7 +78,7 @@ function DropdownMenu(){
                     setLoginModal={setLoginModal}
                     setSignupModal={setSignupModal}/>
                 </Modal>
-            )}
+            )} */}
         </>
     )
 }

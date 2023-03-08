@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
 import "./LoginForm.css";
+import { showSignupModal } from '../../store/ui';
 
-export default function LoginForm(props){
+export default function LoginForm(){
     const dispatch = useDispatch();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");    
     const [errors, setErrors] = useState([]);
-    const setLoginModal = props.setLoginModal;
-    const setSignupModal = props.setSignupModal;
+    // const setLoginModal = props.setLoginModal;
+    // const setSignupModal = props.setSignupModal;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,19 +29,19 @@ export default function LoginForm(props){
             });
     };
 
-    const changeForm=() => {
-        setLoginModal(false)
-        setSignupModal(true)
-    }
+    // const changeForm=() => {
+    //     setLoginModal(false)
+    //     setSignupModal(true)
+    // }
     
     return (
         <>
-            <form className='loginwrapper'onSubmit={handleSubmit}>
+            <form className='loginwrapper' onSubmit={handleSubmit}>
                 <div>
-                    <h4>Log In</h4>
-                    <h3>Welcome to BednBrekkie</h3>
+                    <div>Log In</div>
+                    <div className='welcome' >Welcome to BednBrekkie</div>
                 </div>
-                <div>
+                <div className='input-boxesL'>
                     <label className="loginlabel"> 
                         <input
                         className="logininput"
@@ -66,7 +67,7 @@ export default function LoginForm(props){
                 </div>
                 <div className='buttondiv'>
                     <button className="loginbutton" type = "submit">Log In</button>
-                    <p onClick={changeForm}>New to BednBrekkie? Click here to sign up.</p>
+                    <p onClick={()=> dispatch(showSignupModal())}>New to BednBrekkie? Click here to sign up.</p>
                 </div>           
             </form>
                 <ul className="error-list">

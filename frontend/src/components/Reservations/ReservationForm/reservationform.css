@@ -4,8 +4,24 @@
     height: 448px;
     width: 284px;
     padding: 24px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 10px;
+    box-shadow: 0 0 15px #dddddd; 
+    position: sticky;
+    z-index: 2;
+}
+
+.smallreservation{
+    margin-top: 20px;
+    margin-right: 1.8vw;
+    height: 230px;
+    width: 284px;
+    padding: 24px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 0 15px #dddddd; 
+    position: sticky;
+    z-index: 2;
 }
 
 .bigbold{
@@ -36,9 +52,28 @@
     display: flex;
     justify-content: space-around;
     width: 50%;
-    margin-left: 50px;
+    margin-left: 90px;
+    margin-right: 10px;
     /* padding: 10px; */
 }
+
+.guestbutton {
+    border-radius: 50%;
+    background-color: transparent;
+    /* border: none; */
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+    margin-top: -5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px grey; 
+    border: none;
+}
+
+
 
 .guestForm {
     display: flex;
@@ -50,7 +85,7 @@
     
 }
 
-.reservebutton{
+.reservebutton, .requireLoginButton{
     width: 242px;
     height: 48px;
     border-radius: 5px;
@@ -63,7 +98,9 @@
 }
 
 
-.reservebutton:hover {
+
+
+.reservebutton:hover, .requireLoginButton:hover {
     background-color:#e61e4d;
 }
 
@@ -84,7 +121,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5px;
+    padding: 10px;
 }
 
 .totalprice {
@@ -104,4 +141,19 @@
     margin-top: 20px;
     margin-bottom: 20px;
     /* width: 222.98px; */
+}
+
+.nightprice {
+    margin-top: 20px;
+}
+
+.errorMessage{
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 20px;
+    padding: 5px;
+}
+.errorButton {
+    margin-top: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
