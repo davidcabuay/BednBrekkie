@@ -24,6 +24,11 @@ class User < ApplicationRecord
     class_name: :Reservation,
     dependent: :destroy
 
+    has_many :reviews,
+    foreign_key: :author_id,
+    class_name: :Review,
+    dependent: :destroy
+
     has_secure_password
 
     before_validation :ensure_session_token

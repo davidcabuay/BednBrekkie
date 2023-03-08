@@ -20,12 +20,17 @@ class Listing < ApplicationRecord
   validates :host_id, :price, :title, :description, :address, :city, :num_of_guests, :num_of_bedrooms, :num_of_beds, :num_of_baths, presence: true
   
   belongs_to :host,
-  foreign_key: :host_id,
-  class_name: :User
+    foreign_key: :host_id,
+    class_name: :User
 
   has_many :reservations,
     foreign_key: :listing_id,
     class_name: :Reservation,
+    dependent: :destroy
+
+  has_many :reviews,
+    foreign_key: :listing_id,
+    class_name: :Review,
     dependent: :destroy
 
     has_many_attached :photos
