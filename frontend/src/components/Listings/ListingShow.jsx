@@ -3,13 +3,11 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { getListing, fetchListing } from "../../store/listing";
-import placeholderImg from './bruno.png';
 import './listingShow.css'
 import ReservationForm from "../Reservations/ReservationForm";
 
 export default function ListingShow(){
     const dispatch = useDispatch();
-    const tempImg = placeholderImg;
     const {listingId} = useParams();
     const listing = useSelector(getListing(listingId));
 
@@ -29,22 +27,21 @@ export default function ListingShow(){
                 <div className="titledesc"> 1 Review {listing.address}, {listing.city}</div>
 
                 <div className="grid-container">
-                    {/* <div className="big-img"><img src={listing.photoUrls[0]} alt="house" /></div> */}
-                    <div className="big-img"><img src={tempImg} alt='placeholder' /></div>
-                    <div className="topleft-img"><img src={tempImg} alt='placeholder' /></div>
-                    <div className="topright-img"><img src={tempImg} alt='placeholder' /></div>
-                    <div className="botleft-img"><img src={tempImg} alt='placeholder' /></div>
-                    <div className="botright-img"><img src={tempImg} alt='placeholder' /></div>
+                    <div className="big-img"><img src={listing.photoUrls[0]} alt="house" /></div>
+                    <div className="topleft-img"><img src={listing.photoUrls[1]} alt="house" /></div>
+                    <div className="topright-img"><img src={listing.photoUrls[2]} alt="house" /></div>
+                    <div className="botleft-img"><img src={listing.photoUrls[3]} alt="house" /></div>
+                    <div className="botright-img"><img src={listing.photoUrls[4]} alt="house" /></div>
                 </div>
                 <div className="showcontainers">
                     <div className="leftcontainer">
                         <div className="showcontainer1">
-                            <p className="maindesc">{listing.title}</p>
+                            <p className="maindesc">Entire home hosted by Ken</p>
                             <p className="minordesc">{listing.numOfGuests} guests • {listing.numOfBeds} bedrooms • {listing.numOfBaths} bathrooms</p>
                             
                         </div>
                         <div className="showcontainer2">
-                            <p> description placeholder text description placeholder text description placeholder text description placeholder text description placeholder text description placeholder text description placeholder text</p>
+                            <p> {listing.description}</p>
                         </div>
                         <div className="extras">
                             <h3>What this place offers</h3>

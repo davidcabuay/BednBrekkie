@@ -27,7 +27,7 @@ require "open-uri"
     )
 
     # More users
-    10.times do 
+    20.times do 
         User.create!({
         # username: Faker::Internet.unique.username(specifier: 3),
         email: Faker::Internet.unique.email,
@@ -96,7 +96,7 @@ require "open-uri"
     listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3_3.jpg"), filename: "listing3_3.jpg")
     listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3_4.jpg"), filename: "listing3_4.jpg")
     
-    listiing4 = Listing.create!(
+    listing4 = Listing.create!(
         host_id: 4,
         price: 403,
         title: 'Magical & Romantic Beachfront Home at Pajaro Dunes', 
@@ -286,7 +286,7 @@ require "open-uri"
     listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13_3.jpg"), filename: "listing13_3.jpg")
     listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13_4.jpg"), filename: "listing13_4.jpg")
 
-    listign14 = Listing.create!(
+    listing14 = Listing.create!(
         host_id: 14,
         price: 2049,
         title: 'OnTheRocks•Architectural•Estate•Dramatic Ocean Views', 
@@ -299,11 +299,11 @@ require "open-uri"
         num_of_beds: 3
         ) 
     
-    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14main.jpg"), filename: "listign14main.jpg")
-    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_1.jpg"), filename: "listign14_1.jpg")
-    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_2.jpg"), filename: "listign14_2.jpg")
-    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_3.jpg"), filename: "listign14_3.jpg")
-    listign14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listign14_4.jpg"), filename: "listign14_4.jpg")
+    listing14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing14main.jpg"), filename: "listing14main.jpg")
+    listing14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing14_1.jpg"), filename: "listing14_1.jpg")
+    listing14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing14_2.jpg"), filename: "listing14_2.jpg")
+    listing14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing14_3.jpg"), filename: "listing14_3.jpg")
+    listing14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing14_4.jpg"), filename: "listing14_4.jpg")
 
     listing15 = Listing.create!(
         host_id: 15,

@@ -44,7 +44,7 @@ export default function ProfileButton({user}){
             {showMenu && (
                 <div className='dropdown-context'>
                 <ul className = "profile-dropdown">
-                    <li className='dropdown-list' onClick={reservationPage}>{user.email}</li>
+                    <li className='dropdown-list' onClick={reservationPage}>My Reservations</li>
                     <li className='dropdown-list' onClick={logout}>Log Out</li>
                 </ul>
                 </div>

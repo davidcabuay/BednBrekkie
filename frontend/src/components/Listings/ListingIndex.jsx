@@ -15,10 +15,13 @@ export default function ListingIndex(){
     }, [dispatch])
 
 
+    if (!listings) {
+        return null
+    }else{
     return(
         <div className='indexpage'>
         <div className = "listingscontainer">{listings.map((listing)=> <ListingIndexItem key={listing.id} listing={listing} className="listItem"/>)}</div>
         </div>
     )
-
+    }
 }

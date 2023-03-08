@@ -3,10 +3,11 @@ import csrfFetch from './csrf';
 export const SET_LISTING = 'listing/SET_LISTING'
 export const SET_LISTINGS = 'listing/SET_LISTINGS'
 
-const setListing = (listing) => {
+const setListing = (payload) => {
     return {
         type: SET_LISTING,
-        listing
+        // listing: payload.listing
+        payload
     }
 }
 
@@ -49,7 +50,7 @@ const listingsReducer = (state= {}, action) =>{
             return action.listings;
         case SET_LISTING:
             const newState = {...state};
-            const listing = action.listing;
+            const listing = action.payload.listing;
             newState[listing.id] = listing;
             return newState;
         default:

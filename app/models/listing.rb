@@ -28,5 +28,5 @@ class Listing < ApplicationRecord
     class_name: :Reservation,
     dependent: :destroy
 
-    # has_many_attached :photos
+    has_many_attached :photos
 end

@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import placeholderImg from '../../Listings/bruno.png';
 import './reservation.css'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteReservation } from '../../../store/reservation';
 import { Modal } from '../../../context/Modal';
 import DeleteReservationModal from '../DeleteReservationModal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import EditReservationModal from '../EditReservationModal';
+import { getListing, fetchListing } from '../../../store/listing';
 
 
 export default function ListingIndexItem({reservation}){
-    const tempImg = placeholderImg
     const dispatch = useDispatch();
-
+    const listing = useSelector(getListing(reservation.listingId))
+    
+    useEffect(()=>{
+        dispatch(fetchListing(reservation.listingId))
+    }, [dispatch, reservation.listingId])
     
 
     const [editModal, setEditModal] = useState(false);
@@ -46,20 +49,16 @@ export default function ListingIndexItem({reservation}){
 
     return(
         <>
-            {/* <Link to={`/listings/${listing.id}`} className="listItem">
-                <div><img src={tempImg} alt='placeholder'className="item-img"/></div>
-                <ul className='item-text'>
-                    <li className='boldtext'>{listing.address}, {listing.city}</li>
-                    <li>{listing.title}</li>
-                    <li><span className='boldtext'>${listing.price}</span>  night</li>
-                </ul>
-            </Link> */}
-            <div className='indexItem'>
-                <div>{checkInDay} - {checkOutDay}</div>
-                <div className='numg'>Number of Guests:{reservation.numOfGuests}</div>
-                <div>Listing ID: {reservation.listingId}</div>
-                <button onClick={handleDeleteClick}>Delete</button>
-                <button onClick={handleEditClick}>Edit</button>
+            <Link to={`/listings/${listing.id}`} className="listItem">
+                <div className='indexItem'>
+                    <div>{listing.title}</div>
+                    <div><img src={listing.photoUrls[0]} alt="listing" className="res-img"/></div>
+                    <div>Booked from {checkInDay} - {checkOutDay}</div>
+                    <div className='numg'>Number of Guests:{reservation.numOfGuests}</div>
+                    <button onClick={handleDeleteClick}>Delete</button>
+                    <button onClick={handleEditClick}>Edit</button>
+                </div>
+            </Link>
                 {deleteModal && (
                     <Modal onClose={() => setDeleteModal(false)}>
                         <DeleteReservationModal
@@ -75,7 +74,6 @@ export default function ListingIndexItem({reservation}){
                         onCancel={handleCancelEdit}/>
                 </Modal>
                 )}
-            </div>
         </>
     )
 
