@@ -1,0 +1,111 @@
+
+.starTitle{
+    font-size: 20px;
+    display: flex;
+}
+.starReview{
+    display: flex;
+}
+.smallstar {
+    font-size: 14x;
+}
+.ratingContainer {
+    display:flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin: 20px;
+}
+
+.ratingsWrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nameRating{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.leftRev, .rightRev {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.revformcomponent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider{
+    accent-color: #d70466;
+}
+/* 
+.ratingformwrapper {
+    width: 300px;
+} */
+
+.reviewButton {
+    background-color:#d70466 ;
+    border-radius: 8px;
+    color: aliceblue;
+    border-color: transparent;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.reviewbutton {
+    background-color:#d70466 ;
+    border-radius: 8px;
+    color: aliceblue;
+    border-color: transparent;
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loginbutton {
+    /* background-size: 200% 200%;
+    transition: opacity 1.25s;
+    background-image: radial-gradient( circle at center,var(--ihf-tp-q) 0%,#e61e4d 27.5%,#e31c5f 40%,#d70466 57.5%,#bd1e59 75%,#bd1e59 100% ); */
+    background-color:#d70466 ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
+    border-radius: 8px;
+    height: 36px;
+    color: aliceblue;
+    border-color: transparent;
+    width: 185px;
+    cursor: pointer;
+    margin-top: 89px;
+    margin-bottom: 20px;
+    /* padding-top: 20px; */
+}
+
+.reviewButton:hover {
+    background-color:#e61e4d;
+}
+
+.indexitemcontainer {
+    border-radius: 10px;
+    box-shadow: 0 0 15px #dddddd; 
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-style: bold;
+}
+
+.createdAt {
+    color: grey;
+    font-size: smaller;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}

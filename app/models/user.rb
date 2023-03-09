@@ -13,6 +13,7 @@ class User < ApplicationRecord
     validates :email, :session_token, presence: true, uniqueness: true
     validates :email, length: {in: 3..255}, format: {with: URI::MailTo::EMAIL_REGEXP}
     validates :password, length: {in: 6..2255}, allow_nil: true
+    validates :name, presence: true
 
     has_many :listings,
     foreign_key: :host_id,

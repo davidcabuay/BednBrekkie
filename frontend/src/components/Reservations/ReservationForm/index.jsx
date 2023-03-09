@@ -3,7 +3,6 @@ import {useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getReservation, fetchReservation, createReservation, updateReservation } from '../../../store/reservation';
 import { getListing, fetchListing } from '../../../store/listing';
-import './reservationform.css'
 import Calendar from '../../Calendar';
 import ReservationIndex from '../ReservationIndex';
 import { useHistory } from 'react-router-dom';
@@ -11,6 +10,8 @@ import { Modal } from '../../../context/Modal';
 import LoginFormModal from '../../LoginFormModal';
 import SignupFormModal from '../../SignupFormModal';
 import { showLoginModal } from '../../../store/ui';
+import ReviewLine from '../../Reviews/ReviewLine';
+import './reservationform.css'
 
 
 
@@ -110,7 +111,10 @@ export default function ReservationForm({listing}){
     return(
         <div className={lengthOfStay ? "reservationform" : 'smallreservation'}>
             <form className='formcontainer' onSubmit={handleSubmit}>
-                <div className='listprice'>${listing.price} night</div>
+                <div className='topResForm'>
+                    <div className='listprice'>${listing.price} night</div>
+                    <ReviewLine listing={listing} />
+                </div>
                 <div className='calendarcontainer'>
                     <Calendar 
                         checkIn={checkIn} 

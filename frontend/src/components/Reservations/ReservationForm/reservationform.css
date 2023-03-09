@@ -157,3 +157,8 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.topResForm {
+    display: flex;
+    justify-content: space-between;
+}

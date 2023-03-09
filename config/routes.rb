@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     resources :users, only: :create
     resource :session, only: [:show, :create, :destroy]
     resources :listings, only: [:index, :create, :show]
-    resources :reservations
+    resources :reservations, except: [:edit, :new]
+    resources :reviews, except: [:edit, :new]
   end
   
   get '*path', to: "static_pages#frontend_index"

@@ -4,12 +4,14 @@ import session from "./session";
 import listings from "./listing";
 import reservations from "./reservation"
 import ui from "./ui";
+import reviews from "./review"
 
 export const rootReducer = combineReducers({
     session,
     listings,
     reservations,
-    ui
+    ui,
+    reviews
 })
 
 
