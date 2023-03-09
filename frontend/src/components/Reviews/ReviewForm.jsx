@@ -15,6 +15,7 @@ export default function ReviewForm({listing, onCancel}){
     const [value, setValue] = useState(1);
 
     const sessionUser = useSelector(state => state.session.user);
+    
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -28,6 +29,7 @@ export default function ReviewForm({listing, onCancel}){
             accuracy: accuracy,
             location: location,
             value: value
+            
         }
         dispatch(createReview(revData));
         onCancel();

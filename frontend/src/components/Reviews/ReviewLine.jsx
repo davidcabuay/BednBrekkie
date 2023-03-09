@@ -62,8 +62,7 @@ export default function ReviewLine({listing}){
         <div>
             <div className='starReview'>
                 <StarRateRounded style={{fontSize: '14px'}}className='star'/>
-                {/* <i className="fas fa-star" key={`full-${i}`} /> */}
-                <div>{avgRating} {totalReviews} {totalReviews === 1 ? 'Review': 'Reviews'}</div>
+                <div>{avgRating} <span className="underlined">{totalReviews} {totalReviews === 1 ? 'Review': 'Reviews'}</span></div>
             </div>
         </div>
     )

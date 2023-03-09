@@ -49,7 +49,7 @@ export default function ReviewRatings({reviews}){
         <div className="ratingsContainer">
             <div className="starTitle">
                 <StarRateRounded style={{marginTop: '-3px'}}className="star"/>
-                <div>{avgRating} {totalReviews} {totalReviews === 1 ? 'Review': 'Reviews'}</div>
+                <div>{avgRating} •  {totalReviews} {totalReviews === 1 ? 'Review': 'Reviews'}</div>
             </div>
             <div className="ratingsWrapper">
                 <div className="leftRev">
