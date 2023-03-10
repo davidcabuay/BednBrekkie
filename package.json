@@ -1,7 +1,13 @@
 {
   "dependencies": {
+    "@babel/runtime": "^7.21.0",
+    "moment": "^2.29.4",
+    "react": "^16.14.0",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.14.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^5.3.4",
+    "react-with-direction": "^1.4.0",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2"
   },

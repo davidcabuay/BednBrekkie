@@ -8,7 +8,10 @@
     grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
     margin: 10px;
+}
 
+.starrating{
+    margin-right: 20px;
 }
 
 .listItem {
@@ -104,7 +107,7 @@
         width: 40vw;
         height: 55vw;
     }
- 
+
 }
 @media (max-width: 600px) {
     .listingscontainer {

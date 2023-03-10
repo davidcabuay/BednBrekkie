@@ -17,7 +17,7 @@ export default function ListingIndexItem({listing}){
                 <ul className='item-text'>
                     <li className='boldtextflex'>
                         <div>{listing.address}, {listing.city}</div>
-                        <ReviewSnip listing={listing} />
+                        <div className="starrating"><ReviewSnip listing={listing} /></div>
                         </li>
                     <li className='listingtitle'>{listing.title}</li>
                     <li><span className='boldtext'>${listing.price}</span>  night</li>
