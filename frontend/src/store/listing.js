@@ -23,7 +23,7 @@ export const getListing = (listingId) => (state) => {
 }
 
 export const getListings = (state) => {
-    // console.log(state, 'getlistings')
+    
     return state.listings ? Object.values(state.listings) : []
 }
 

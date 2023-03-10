@@ -10,7 +10,7 @@ import ReviewRatings from "./ReviewRatings";
 export default function ReviewIndex({listing}){
     const dispatch = useDispatch();
     let reviews = useSelector(getReviews);
-    console.log('reviews', reviews)
+  
 
     let listingReviews = reviews.filter(review =>
         review.listingId === listing.id)

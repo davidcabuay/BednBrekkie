@@ -1,4 +1,5 @@
 import WifiRoundedIcon from '@mui/icons-material/WifiRounded';
+import BeachAccessRoundedIcon from '@mui/icons-material/BeachAccessRounded';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
@@ -51,10 +52,10 @@ export default function ListingShow(){
                         </div>
                         <div className="extras">
                             <h3>What this place offers</h3>
-                            <div><WifiRoundedIcon/> Lake view</div>
+                            <div> <BeachAccessRoundedIcon/> Ocean view</div>
                             <div> Mountain View</div>
                             <div> Kitchen</div>
-                            <div> Wifi</div>
+                            <div> <WifiRoundedIcon/> Wifi</div>
                             <div> Dedicated workspace</div>
                         </div>
                         <div className="reviewsection"> 

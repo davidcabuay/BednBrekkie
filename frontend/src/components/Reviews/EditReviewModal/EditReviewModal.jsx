@@ -16,9 +16,7 @@ export default function EditReviewModal({review, onCancel}){
     const [value, setValue] = useState(review.value);
 
     const sessionUser = useSelector(state => state.session.user);
-    console.log("SESSIONUSER", sessionUser.id)
-    console.log("Review", review.listingId)
-    console.log("reviewId",review.id)
+
 
     const handleSubmit = async(e) => {
         e.preventDefault();
