@@ -34,6 +34,3 @@ Users can book a reservation on their desired listing, and are given the ability
 
 Users can write a review and rate a listing, as well as edit and delete the review. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
