@@ -28,7 +28,14 @@
     grid-row-end: 3;
 
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    text-decoration: none;
+    color: black;
+}
 .big-img img{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;

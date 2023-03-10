@@ -42,7 +42,7 @@ export default function ReviewIndex({listing}){
         
     return(
         <>
-            <div><ReviewRatings reviews={listingReviews}/></div>
+            <div id="reviews"><ReviewRatings reviews={listingReviews}/></div>
             {reviewContainer}
             <div>{listingReviews.map((review)=> <ReviewIndexItem key={review.id} review={review}/>)}</div>
             {reviewModal && (

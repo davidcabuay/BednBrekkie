@@ -27,7 +27,7 @@ export default function ListingShow(){
             <div className="showpage">
                 <div className="title">{listing.title}</div>
                 <div className="titledesc"> 
-                    <ReviewLine listing={listing}/>
+                    <a href="#reviews"><ReviewLine listing={listing}/></a>
                     <div className='listaddress'>{listing.address}, {listing.city}</div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function ListingShow(){
                                 </div>
                             </div>
                         </div>
-                        <div className="reviewsection"> 
+                        <div id="reviews" className="reviewsection"> 
                             <ReviewIndex listing={listing}/>
                         </div>
                     </div>

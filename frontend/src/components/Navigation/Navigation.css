@@ -66,3 +66,13 @@ ul:hover{
 .searchbutton:hover {
     background-color:#e61e4d;
 }
+
+.Homelink{
+    text-decoration: none;
+    color: #d70466;
+}
+
+.Homelink:visited{
+    text-decoration: none;
+    color: #d70466;
+}

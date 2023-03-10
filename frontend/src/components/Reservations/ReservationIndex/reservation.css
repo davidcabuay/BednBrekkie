@@ -24,6 +24,7 @@
 }
 .listItem:visited {
     text-decoration: none;
+    color: black;
 }
 
 .editdeletebutton{
@@ -46,7 +47,7 @@
     font-size: 20px;
 }
 
-.listItem:link { text-decoration: none;}
-.listItem:visited { text-decoration: none;}
-.listItem:hover { text-decoration: none;}
-.listItem:active { text-decoration: none;}
+.listItem:link { text-decoration: none; color: black}
+.listItem:visited { text-decoration: none; color: black}
+.listItem:hover { text-decoration: none; color: black}
+.listItem:active { text-decoration: none; color: black}
