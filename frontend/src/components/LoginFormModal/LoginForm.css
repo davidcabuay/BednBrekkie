@@ -55,14 +55,14 @@ form {
     text-align: left;
 }
 
-.error-list {
+.error-listl {
     list-style-type: square;
     font-size: small;
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
     top: -140px;
     position: relative;
     width: 250px;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .buttondiv {

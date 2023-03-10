@@ -70,7 +70,7 @@ export default function LoginForm(){
                     <p onClick={()=> dispatch(showSignupModal())}>New to BednBrekkie? Click here to sign up.</p>
                 </div>           
             </form>
-                <ul className="error-list">
+                <ul className="error-listl">
                     {errors.map(error => <li className='errors'  key={error}>{error}</li>)}
                 </ul>
         </>
