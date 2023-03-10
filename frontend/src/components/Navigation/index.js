@@ -33,7 +33,8 @@ function Navigation(){
         <div className="navwrapper">
             
                 <NavLink className = 'Homelink' exact to="/">
-                    <HomeIcon />
+                    {/* <HomeIcon /> */}
+                    <i class="fa-solid fa-bed fa-2x"></i>
                 </NavLink>
                 <div className="search-bar">
                     <input

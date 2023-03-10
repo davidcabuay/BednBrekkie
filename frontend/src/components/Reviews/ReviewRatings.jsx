@@ -48,7 +48,8 @@ export default function ReviewRatings({reviews}){
     return(
         <div className="ratingsContainer">
             <div className="starTitle">
-                <StarRateRounded style={{marginTop: '-3px'}}className="star"/>
+                {/* <StarRateRounded style={{marginTop: '-3px'}}className="star"/> */}
+                <i class="fa-solid fa-star"></i>
                 <div>{avgRating} •  {totalReviews} {totalReviews === 1 ? 'Review': 'Reviews'}</div>
             </div>
             <div className="ratingsWrapper">
@@ -59,7 +60,8 @@ export default function ReviewRatings({reviews}){
                             <div>
                             {cleanRatingAvg} 
                             </div>
-                            <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/>
+                            {/* <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/> */}
+                            <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                     <div className="nameRating">
@@ -68,7 +70,8 @@ export default function ReviewRatings({reviews}){
                             <div>
                             {commRatingAvg} 
                             </div>
-                            <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/>
+                            {/* <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/> */}
+                            <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                     <div className="nameRating">
@@ -77,7 +80,8 @@ export default function ReviewRatings({reviews}){
                             <div>
                             {checkinRatingAvg} 
                             </div>
-                            <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/>
+                            {/* <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/> */}
+                            <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                 </div>
@@ -88,7 +92,8 @@ export default function ReviewRatings({reviews}){
                             <div>
                             {accRatingAvg} 
                             </div>
-                            <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/>
+                            {/* <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/> */}
+                            <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                     <div className="nameRating">
@@ -97,7 +102,8 @@ export default function ReviewRatings({reviews}){
                             <div>
                             {locRatingAvg} 
                             </div>
-                            <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/>
+                            {/* <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/> */}
+                            <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                     <div className="nameRating">
@@ -106,7 +112,8 @@ export default function ReviewRatings({reviews}){
                             <div>
                             {valRatingAvg} 
                             </div>
-                            <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/>
+                            {/* <StarRateRounded style={{fontSize: '14px'}} className="smallstar"/> */}
+                            <i class="fa-solid fa-star"></i>
                         </div>
                     </div>
                 </div>

@@ -38,9 +38,8 @@ export default function ProfileButton({user}){
 
     return(
         <>
-            <AccountCircleRoundedIcon className='profileicon' onClick={openMenu}/>
-                {/* <i className = "fa-solid fa-user-circle" />
-            </AccountCircleRoundedIcon> */}
+            {/* <AccountCircleRoundedIcon className='profileicon' onClick={openMenu}/> */}
+            <i className = "fa-solid fa-user-circle fa-2x" style={{cursor: 'pointer'}}onClick={openMenu}/>
             {showMenu && (
                 <div className='dropdown-context'>
                 <ul className = "profile-dropdown">

@@ -5,6 +5,7 @@
 
 .title{
     margin-left: 2vw;
+    margin-top: 20px;
 }
 
 .listaddress{
@@ -109,6 +110,10 @@ img {
     padding: 5px;
 }
 
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
 
 h3{
     text-align: left;

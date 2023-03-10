@@ -15,7 +15,7 @@ ul:hover{
     padding: 5px;
 
 }
-.profileicon:hover{
+.fa-solid fa-user-circle:hover{
     cursor: pointer;
 }
 

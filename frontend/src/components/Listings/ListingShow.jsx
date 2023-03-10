@@ -51,12 +51,24 @@ export default function ListingShow(){
                             <p> {listing.description}</p>
                         </div>
                         <div className="extras">
-                            <h3>What this place offers</h3>
-                            <div> <BeachAccessRoundedIcon/> Ocean view</div>
-                            <div> Mountain View</div>
-                            <div> Kitchen</div>
-                            <div> <WifiRoundedIcon/> Wifi</div>
-                            <div> Dedicated workspace</div>
+                            <div className="maindesc">What this place offers</div>
+                            <div className='flex'>
+                                <div >
+                                    <div> <i class="fa-solid fa-umbrella-beach"></i> Ocean view</div>
+                                    <div> <i class="fa-solid fa-mountain"></i> Mountain View</div>
+                                    <div> <i class="fa-solid fa-kitchen-set"></i> Kitchen</div>
+                                </div>
+                                <div>
+                                    <div> <i class="fa-solid fa-wifi"></i> Wifi</div>
+                                    <div> <i class="fa-solid fa-car"></i> Free Parking</div>
+                                    <div> <i class="fa-solid fa-house-laptop"></i> Dedicated workspace</div>
+                                </div>
+                                <div>
+                                    <div> <i class="fa-solid fa-key"></i> Self Check-in</div>
+                                    <div> <i class="fa-solid fa-bath"></i> Bathtub</div>
+                                    <div> <i class="fa-solid fa-tv"></i> TV</div>
+                                </div>
+                            </div>
                         </div>
                         <div className="reviewsection"> 
                             <ReviewIndex listing={listing}/>
