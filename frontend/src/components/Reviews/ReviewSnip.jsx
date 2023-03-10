@@ -1,9 +1,9 @@
-import StarRateRounded from "@mui/icons-material/StarRateRounded";
+
 import { useSelector, useDispatch } from "react-redux";
 import { getReviews, fetchReviews } from "../../store/review";
 import { useEffect } from "react";
 import './review.css'
-import { fontSize } from "@mui/system";
+
 
 
 export default function ReviewSnip({listing}){

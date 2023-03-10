@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
+
 import { updateReview } from "../../../store/review";
 
 export default function EditReviewModal({review, onCancel}){

@@ -1,5 +1,4 @@
-import WifiRoundedIcon from '@mui/icons-material/WifiRounded';
-import BeachAccessRoundedIcon from '@mui/icons-material/BeachAccessRounded';
+
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";

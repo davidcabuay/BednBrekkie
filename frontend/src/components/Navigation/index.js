@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import DropdownMenu from '../DropDown';
-import HomeIcon from '@mui/icons-material/Home';
+
 import SignupFormModal from '../SignupFormModal';
 
 

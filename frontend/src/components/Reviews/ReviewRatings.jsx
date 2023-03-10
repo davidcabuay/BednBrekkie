@@ -1,4 +1,4 @@
-import StarRateRounded from "@mui/icons-material/StarRateRounded";
+
 import { useSelector } from "react-redux";
 import { getReviews, fetchReviews } from "../../store/review";
 import './review.css'

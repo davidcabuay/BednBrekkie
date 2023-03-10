@@ -4,7 +4,6 @@ import { Modal } from '../../context/Modal';
 // import LoginForm from '../LoginFormModal/LoginForm';
 // import SignupForm from '../SignupFormModal/SignupForm';
 import { login } from '../../store/session';
-import MenuIcon from "@mui/icons-material/Menu";
 import { showSignupModal, showLoginModal } from '../../store/ui';
 import './dropdown.css';
 
