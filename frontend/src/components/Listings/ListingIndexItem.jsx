@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import ReviewSnip from '../Reviews/ReviewSnip';
 import './listing.css'
 
 
@@ -13,8 +15,11 @@ export default function ListingIndexItem({listing}){
                 <div><img src={listing.photoUrls[0]} alt="listing" className="item-img"/></div>
                 {/* <div><img src={tempImg} alt='placeholder'className="item-img"/></div> */}
                 <ul className='item-text'>
-                    <li className='boldtext'>{listing.address}, {listing.city}</li>
-                    <li>{listing.title}</li>
+                    <li className='boldtextflex'>
+                        <div>{listing.address}, {listing.city}</div>
+                        <ReviewSnip listing={listing} />
+                        </li>
+                    <li className='listingtitle'>{listing.title}</li>
                     <li><span className='boldtext'>${listing.price}</span>  night</li>
                 </ul>
             </Link>

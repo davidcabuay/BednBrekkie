@@ -1,4 +1,5 @@
 class Api::ReviewsController < ApplicationController
+    # wrap_parameters include: Review.attribute_names
 
     def index
         @reviews = Review.all

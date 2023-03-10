@@ -66,7 +66,7 @@ export default function LoginForm(){
                     </label>
                 </div>
                 <div className='buttondiv'>
-                    <button className="loginbutton" type = "submit">Log In</button>
+                    <button className="loginbuttonform" type = "submit">Log In</button>
                     <p onClick={()=> dispatch(showSignupModal())}>New to BednBrekkie? Click here to sign up.</p>
                 </div>           
             </form>

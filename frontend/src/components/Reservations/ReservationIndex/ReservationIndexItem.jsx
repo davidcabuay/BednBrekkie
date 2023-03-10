@@ -49,16 +49,16 @@ export default function ListingIndexItem({reservation}){
 
     return(
         <>
-            <Link to={`/listings/${listing.id}`} className="listItem">
                 <div className='indexItem'>
-                    <div>{listing.title}</div>
-                    <div><img src={listing.photoUrls[0]} alt="listing" className="res-img"/></div>
-                    <div>Booked from {checkInDay} - {checkOutDay}</div>
-                    <div className='numg'>Number of Guests:{reservation.numOfGuests}</div>
-                    <button onClick={handleDeleteClick}>Delete</button>
-                    <button onClick={handleEditClick}>Edit</button>
+                    <Link to={`/listings/${listing.id}`} className="listItem">
+                        <div className='listtitle'>{listing.title}</div>
+                        <div><img src={listing.photoUrls[0]} alt="listing" className="res-img"/></div>
+                        <div>Booked from {checkInDay} - {checkOutDay}</div>
+                        <div className='numg'>Number of Guests: {reservation.numOfGuests}</div>
+                    </Link>
+                    <button className="editdeletebutton" onClick={handleDeleteClick}>Delete</button>
+                    <button className="editdeletebutton" onClick={handleEditClick}>Edit</button>
                 </div>
-            </Link>
                 {deleteModal && (
                     <Modal onClose={() => setDeleteModal(false)}>
                         <DeleteReservationModal

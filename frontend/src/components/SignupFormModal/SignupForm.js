@@ -10,6 +10,7 @@ import './SignupFormPage.css';
 function SignupForm() {
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -25,7 +26,7 @@ function SignupForm() {
         e.preventDefault();
         if (password === confirmPassword) {
             setErrors([]);
-            return dispatch(sessionActions.signup({ email, password }))
+            return dispatch(sessionActions.signup({ name, email, password }))
             .catch(async (res) => {
             let data;
             try {
@@ -55,6 +56,17 @@ function SignupForm() {
                 <div className="welcome" >Welcome to BednBrekkie</div>
             </div>
             <div className="input-boxes">
+                <label>
+                    <input
+                    className='nameinput'
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    // placeholder="email"
+                    />
+                    <span className='floating-label11'>name</span>
+                </label>
                 <label>
                     <input
                     className='signupinput'

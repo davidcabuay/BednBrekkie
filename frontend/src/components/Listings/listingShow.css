@@ -7,7 +7,9 @@
     margin-left: 2vw;
 }
 
-
+.listaddress{
+    margin-left: 5px;
+}
 
 .grid-container {
     display: grid;
@@ -71,6 +73,7 @@
 
 .maindesc{
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .minordesx{

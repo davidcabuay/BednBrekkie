@@ -5,3 +5,43 @@
 .numg{
     padding: 10px 0;
 }
+
+.reservationindextitle {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.res-img{
+    border-radius: 10px;
+}
+.indexItem {
+    height: 600px;
+    width: 600px;
+}
+
+.listItem {
+    text-decoration: none;
+}
+.listItem:visited {
+    text-decoration: none;
+}
+
+.editdeletebutton{
+    width: 65px;
+    height: 25px;
+    border-radius: 5px;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color:#d70466 ;
+    color: aliceblue;
+    border: none;
+}
+
+.editdeletebutton:hover {
+    background-color:#e61e4d;
+}
+
+.listtitle {
+    font-size: 20px;
+}

@@ -27,7 +27,9 @@ export default function ListingShow(){
             <div className="showpage">
                 <div className="title">{listing.title}</div>
                 <div className="titledesc"> 
-                {<ReviewLine listing={listing}/>}__ {listing.address}, {listing.city}</div>
+                    <ReviewLine listing={listing}/>
+                    <div className='listaddress'>{listing.address}, {listing.city}</div>
+                </div>
 
                 <div className="grid-container">
                     <div className="big-img"><img src={listing.photoUrls[0]} alt="house" /></div>
