@@ -92,11 +92,21 @@
     background-color:#e61e4d;
 }
 
+.editdeletewrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+}
+
+
 .indexitemcontainer {
     border-radius: 10px;
     box-shadow: 0 0 15px #dddddd; 
     padding: 20px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .author {

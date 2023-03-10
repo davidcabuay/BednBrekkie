@@ -49,7 +49,8 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{cleanliness}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -62,7 +63,8 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{communication}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -75,7 +77,8 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{checkin}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -88,7 +91,8 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{accuracy}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -101,7 +105,8 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{location}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -114,7 +119,8 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{value}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div>
@@ -126,8 +132,8 @@ export default function EditReviewModal({review, onCancel}){
                     cols={20}
                     />
                 </div>
-                <button className="reviewButton" onClick={handleSubmit}>Update Review</button>
                 <button className="cancelbutton" onClick={onCancel}>Cancel</button>
+                <button className="reviewButton" onClick={handleSubmit}>Update Review</button>
             </div>
         </div>
     )

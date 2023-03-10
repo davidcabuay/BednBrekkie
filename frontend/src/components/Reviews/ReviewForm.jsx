@@ -47,7 +47,8 @@ export default function ReviewForm({listing, onCancel}){
                     className = 'slider'
                     />
                     <div>{cleanliness}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -60,7 +61,8 @@ export default function ReviewForm({listing, onCancel}){
                     className = 'slider'
                     />
                     <div>{communication}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -73,7 +75,8 @@ export default function ReviewForm({listing, onCancel}){
                     className = 'slider'
                     />
                     <div>{checkin}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -86,7 +89,8 @@ export default function ReviewForm({listing, onCancel}){
                     className = 'slider'
                     />
                     <div>{accuracy}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -99,7 +103,8 @@ export default function ReviewForm({listing, onCancel}){
                     className = 'slider'
                     />
                     <div>{location}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div className="ratingContainer">
@@ -112,7 +117,8 @@ export default function ReviewForm({listing, onCancel}){
                     className = 'slider'
                     />
                     <div>{value}</div>
-                    <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/>
+                    <i class="fa-solid fa-star"></i>
+                    {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
                 <div>

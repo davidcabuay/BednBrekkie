@@ -47,7 +47,8 @@ function DropdownMenu(){
     return (
         <>
             <div className='ddwrapper' > 
-                <MenuIcon className='menu' onClick={handleDropdown}/>
+                {/* <MenuIcon className='menu' onClick={handleDropdown}/> */}
+                <i class="fa-solid fa-bars fa-2x" style={{cursor:'pointer'}}onClick={handleDropdown}></i>
                 {isOpen && (
                     <div className='dropdown-context'>
                         <ul className='profile-dropdown'>

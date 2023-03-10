@@ -46,9 +46,9 @@ export default function ReviewIndexItem({review}){
         if (sessionUser){
             if (sessionUser.id === review.authorId){
                 editContainer =
-                <div>
-                    <button className="editdeletebutton" onClick={handleDeleteClick}>Delete</button>
+                <div className="editdeletewrapper">
                     <button className="editdeletebutton" onClick={handleEditClick}>Edit</button>
+                    <button id="dwrapper" className="editdeletebutton" onClick={handleDeleteClick}>Delete</button>
                 </div>
         }}else{
             editContainer = <></>

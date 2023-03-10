@@ -15,8 +15,8 @@ export default function DeleteReviewModal({review, onCancel}){
         <div className="deletemodal">
             <p className="deletetext">Are you sure you want to delete this review?</p>
             <div className="dbuttons">
-                <button className="deletebutton" onClick={handleDelete}>Delete</button>
                 <button className="cancelbutton" onClick={onCancel}>Cancel</button>
+                <button className="deletebutton" onClick={handleDelete}>Delete</button>
             </div>
         </div>
     )
