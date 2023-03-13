@@ -1,6 +1,6 @@
 # BednBrekkie
 
-www.bednbrekkie.onrender.com
+[BednBrekkie live site!](www.bednbrekkie.onrender.com)
 
 ## Background
 
@@ -34,3 +34,16 @@ Users can book a reservation on their desired listing, and are given the ability
 
 Users can write a review and rate a listing, as well as edit and delete the review. 
 
+
+## Features 
+### User Authentication - Login/Signup 
+<img src="./readmeassets/login-signup-demo.gif" alt="text" width="800"/>
+<img src="./readmeassets/login-signup-code.png" alt="text" width="800"/>
+
+### Creating and Updating a Story
+<img src="./readmeassets/edit-update-demo.gif" alt="text" width="800"/> 
+<img src="./readmeassets/edit-update-code.png" alt="text" width="800"/>
+
+## Future Features 
+* Applauds - Users will be able to applaud stories as many times as they would like.
+* Respones - Users will be able to leave responses to stories.

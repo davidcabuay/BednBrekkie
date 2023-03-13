@@ -46,7 +46,7 @@ export default function EditReservationModal({reservation, numOfGuests, onCancel
     return(
         <div className="editmodal">
             <div className="edittext">Number of Guests</div>
-            <div className='guestChanger'>
+            <div className='guestChanger1'>
                 <button onClick={subtractGuest}>-</button>
                 <div>{numGuest}</div>
                 <button onClick={addGuest}>+</button>

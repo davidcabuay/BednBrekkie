@@ -35,7 +35,11 @@
     background-color: lightgrey;
 }
 
-.guestChanger {
+.guestChanger1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 50%;
     margin-left: 50px;
     margin-bottom: 20px;
 }

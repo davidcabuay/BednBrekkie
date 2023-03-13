@@ -106,7 +106,7 @@ function SignupForm() {
                 <p onClick={()=> dispatch(showLoginModal())}>Already have an account? Click here to log in.</p>
             </div>
         </form>
-            <ul className="error-list">
+            <ul className="error-list-sign">
                 {errors.map(error => <li className='errors' key={error}>{error}</li>)}
             </ul>
         </>
