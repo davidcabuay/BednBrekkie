@@ -52,7 +52,7 @@ export default function ListingShow(){
                         <div className="extras">
                             <div className="maindesc">What this place offers</div>
                             <div className='flex'>
-                                <div >
+                                <div>
                                     <div> <i class="fa-solid fa-umbrella-beach"></i> Ocean view</div>
                                     <div> <i class="fa-solid fa-mountain"></i> Mountain View</div>
                                     <div> <i class="fa-solid fa-kitchen-set"></i> Kitchen</div>
