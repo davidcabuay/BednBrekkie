@@ -18,6 +18,9 @@ require "open-uri"
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
+    ApplicationRecord.connection.reset_pk_sequence!('listings')
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
+
 
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
@@ -348,17 +351,17 @@ require "open-uri"
     
     puts "Creating Reviews..."
     # Create one user with an easy to remember username, email, and password:
-    # review1 = Review.create!(
-    #     author_id: 16,
-    #     listing_id: 1,
-    #     body: 'This home was the best!',
-    #     cleanliness: 5,
-    #     communication: 4,
-    #     check_in: 5,
-    #     accuracy: 5,
-    #     location: 4,
-    #     value: 5
-    # )
+    review1 = Review.create!(
+        author_id: 16,
+        listing_id: 1,
+        body: 'This home was the best!',
+        cleanliness: 5,
+        communication: 4,
+        check_in: 5,
+        accuracy: 5,
+        location: 4,
+        value: 5
+    )
 
     review2 = Review.create!(
         author_id: 1,
