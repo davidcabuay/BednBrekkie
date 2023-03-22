@@ -348,197 +348,197 @@ require "open-uri"
     
     puts "Creating Reviews..."
     # Create one user with an easy to remember username, email, and password:
-    # review1 = Review.create!(
-    #     author_id: 16,
-    #     listing_id: 1,
-    #     body: 'This home was the best!',
-    #     cleanliness: 5,
-    #     communication: 4,
-    #     check_in: 5,
-    #     accuracy: 5,
-    #     location: 4,
-    #     value: 5
-    # )
+    review1 = Review.create!(
+        author_id: 16,
+        listing_id: 1,
+        body: 'This home was the best!',
+        cleanliness: 5,
+        communication: 4,
+        check_in: 5,
+        accuracy: 5,
+        location: 4,
+        value: 5
+    )
 
-    # review2 = Review.create!(
-    #     author_id: 1,
-    #     listing_id: 2,
-    #     body: 'No, this home was the best!',
-    #     cleanliness: 5,
-    #     communication: 4,
-    #     check_in: 3,
-    #     accuracy: 4,
-    #     location: 2,
-    #     value: 3
-    # )
+    review2 = Review.create!(
+        author_id: 1,
+        listing_id: 2,
+        body: 'No, this home was the best!',
+        cleanliness: 5,
+        communication: 4,
+        check_in: 3,
+        accuracy: 4,
+        location: 2,
+        value: 3
+    )
 
-    # review3 = Review.create!(
-    #     author_id: 2,
-    #     listing_id: 3,
-    #     body: 'This home was the bestest!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review3 = Review.create!(
+        author_id: 2,
+        listing_id: 3,
+        body: 'This home was the bestest!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review4 = Review.create!(
-    #     author_id: 3,
-    #     listing_id: 4,
-    #     body: 'This home was ok at best!',
-    #     cleanliness: 3,
-    #     communication: 4,
-    #     check_in: 3,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 3
-    # )
+    review4 = Review.create!(
+        author_id: 3,
+        listing_id: 4,
+        body: 'This home was ok at best!',
+        cleanliness: 3,
+        communication: 4,
+        check_in: 3,
+        accuracy: 4,
+        location: 4,
+        value: 3
+    )
 
-    # review5 = Review.create!(
-    #     author_id: 4,
-    #     listing_id: 5,
-    #     body: 'This home is a catfish!',
-    #     cleanliness: 3,
-    #     communication: 2,
-    #     check_in: 1,
-    #     accuracy: 5,
-    #     location: 4,
-    #     value: 3
-    # )
+    review5 = Review.create!(
+        author_id: 4,
+        listing_id: 5,
+        body: 'This home is a catfish!',
+        cleanliness: 3,
+        communication: 2,
+        check_in: 1,
+        accuracy: 5,
+        location: 4,
+        value: 3
+    )
 
-    # review6 = Review.create!(
-    #     author_id: 5,
-    #     listing_id: 6,
-    #     body: 'This home was the bestie!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review6 = Review.create!(
+        author_id: 5,
+        listing_id: 6,
+        body: 'This home was the bestie!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review7 = Review.create!(
-    #     author_id: 6,
-    #     listing_id: 7,
-    #     body: 'This home was the bester!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review7 = Review.create!(
+        author_id: 6,
+        listing_id: 7,
+        body: 'This home was the bester!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review8 = Review.create!(
-    #     author_id: 7,
-    #     listing_id: 8,
-    #     body: 'This home was the best best!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review8 = Review.create!(
+        author_id: 7,
+        listing_id: 8,
+        body: 'This home was the best best!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review9 = Review.create!(
-    #     author_id: 8,
-    #     listing_id: 9,
-    #     body: 'This home was the better best!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review9 = Review.create!(
+        author_id: 8,
+        listing_id: 9,
+        body: 'This home was the better best!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review10 = Review.create!(
-    #     author_id: 9,
-    #     listing_id: 10,
-    #     body: 'This home was the good best!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review10 = Review.create!(
+        author_id: 9,
+        listing_id: 10,
+        body: 'This home was the good best!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review11 = Review.create!(
-    #     author_id: 10,
-    #     listing_id: 11,
-    #     body: 'This home was the best home!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review11 = Review.create!(
+        author_id: 10,
+        listing_id: 11,
+        body: 'This home was the best home!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review12 = Review.create!(
-    #     author_id: 11,
-    #     listing_id: 12,
-    #     body: 'This home was incredible!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review12 = Review.create!(
+        author_id: 11,
+        listing_id: 12,
+        body: 'This home was incredible!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review13 = Review.create!(
-    #     author_id: 12,
-    #     listing_id: 13,
-    #     body: 'This home was fantastic!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review13 = Review.create!(
+        author_id: 12,
+        listing_id: 13,
+        body: 'This home was fantastic!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review14 = Review.create!(
-    #     author_id: 13,
-    #     listing_id: 14,
-    #     body: 'This home was dominating!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review14 = Review.create!(
+        author_id: 13,
+        listing_id: 14,
+        body: 'This home was dominating!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review15 = Review.create!(
-    #     author_id: 14,
-    #     listing_id: 15,
-    #     body: 'This home was unstoppable!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review15 = Review.create!(
+        author_id: 14,
+        listing_id: 15,
+        body: 'This home was unstoppable!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
 
-    # review16 = Review.create!(
-    #     author_id: 15,
-    #     listing_id: 16,
-    #     body: 'This home was the ace!',
-    #     cleanliness: 4,
-    #     communication: 4,
-    #     check_in: 4,
-    #     accuracy: 4,
-    #     location: 4,
-    #     value: 5
-    # )
+    review16 = Review.create!(
+        author_id: 15,
+        listing_id: 16,
+        body: 'This home was the ace!',
+        cleanliness: 4,
+        communication: 4,
+        check_in: 4,
+        accuracy: 4,
+        location: 4,
+        value: 5
+    )
     
     
     
