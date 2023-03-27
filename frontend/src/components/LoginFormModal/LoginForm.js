@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch } from 'react-redux';
+import { login } from '../../store/session';
 import "./LoginForm.css";
 import { showSignupModal } from '../../store/ui';
 
@@ -28,6 +29,11 @@ export default function LoginForm(){
             else setErrors([res.statusText]);
             });
     };
+
+    const demoLogin = (e) => {
+        e.preventDefault();
+        return dispatch(login({email: 'demo@user.io', password: 'password'}))
+    }
 
     // const changeForm=() => {
     //     setLoginModal(false)
@@ -67,8 +73,10 @@ export default function LoginForm(){
                 </div>
                 <div className='buttondiv'>
                     <button className="loginbuttonform" type = "submit">Log In</button>
+                    <button className="demologinbuttonform" onClick={demoLogin} >Demo Log In</button>
                     <p onClick={()=> dispatch(showSignupModal())}>New to BednBrekkie? Click here to sign up.</p>
-                </div>           
+                </div>   
+                        
             </form>
                 <ul className="error-listl">
                     {errors.map(error => <li className='errors'  key={error}>{error}</li>)}

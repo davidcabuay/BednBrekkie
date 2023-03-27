@@ -127,7 +127,24 @@ input:not(:focus):valid ~ .floating-label5{
     border-color: transparent;
     width: 185px;
     cursor: pointer;
-    margin-top: 106px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    /* padding-top: 20px; */
+}
+
+.demologinbuttonform {
+    /* background-size: 200% 200%;
+    transition: opacity 1.25s;
+    background-image: radial-gradient( circle at center,var(--ihf-tp-q) 0%,#e61e4d 27.5%,#e31c5f 40%,#d70466 57.5%,#bd1e59 75%,#bd1e59 100% ); */
+    background-color:#d70466 ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
+    border-radius: 8px;
+    height: 36px;
+    color: aliceblue;
+    border-color: transparent;
+    width: 185px;
+    cursor: pointer;
+    margin-top: 0px;
     margin-bottom: 20px;
     /* padding-top: 20px; */
 }
