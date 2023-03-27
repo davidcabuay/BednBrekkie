@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-
+import '../review.css'
 import { updateReview } from "../../../store/review";
 
 export default function EditReviewModal({review, onCancel}){
@@ -16,10 +15,12 @@ export default function EditReviewModal({review, onCancel}){
     const [value, setValue] = useState(review.value);
 
     const sessionUser = useSelector(state => state.session.user);
+    const [showError, setShowError] = useState(false)
 
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+        if(body.length>0){
         const revData = {
             ...review,
             listing_id: review.listingId,
@@ -35,10 +36,16 @@ export default function EditReviewModal({review, onCancel}){
         }
         dispatch(updateReview(revData));
         onCancel();
+        }else{
+            setShowError(true)
+        }
     }
     return(
         <div className="ratingformwrapper">
             <div>
+            {showError && (
+                    <p className="editErrors">Please add text to your review.</p>
+                ) }
                 <div className="ratingContainer">
                     <p>Cleanliness</p>
                     <div className="revformcomponent">

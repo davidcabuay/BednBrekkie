@@ -15,10 +15,11 @@ export default function ReviewForm({listing, onCancel}){
     const [value, setValue] = useState(1);
 
     const sessionUser = useSelector(state => state.session.user);
-    
+    const [showError, setShowError] = useState(false)
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+        if(body.length > 0){
         const revData = {
             listing_id: listing.id,
             author_id: sessionUser.id,
@@ -33,10 +34,16 @@ export default function ReviewForm({listing, onCancel}){
         }
         dispatch(createReview(revData));
         onCancel();
+        }else{
+            setShowError(true)
+        }
     }
     return(
         <div className="ratingformwrapper">
             <form onSubmit={handleSubmit}>
+                {showError && (
+                    <p className="errors">Please add text to your review.</p>
+                ) }
                 <div className="ratingContainer">
                     <p>Cleanliness</p>
                     <div className="revformcomponent">

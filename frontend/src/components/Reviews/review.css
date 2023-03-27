@@ -14,6 +14,7 @@
     flex-direction: column;
     font-size: 14px;
     margin: 20px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
 
 .ratingsWrapper{
@@ -38,6 +39,7 @@
 .revformcomponent {
     display: flex;
     justify-content: space-between;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
 
 .slider{
@@ -122,4 +124,11 @@
 
 .underlined {
     text-decoration: underline; 
+}
+
+.editErrors {
+    color: red;
+    font-size: smaller;
+    text-align: center;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
