@@ -36,6 +36,26 @@ ul:hover{
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15)
 }
 
+.about-links{
+    display: flex;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    color:#d70466 ;
+}
+
+.about{
+    color:#d70466;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+.about:visited{
+    text-decoration: none;
+    color: #d70466;
+}
+
 .search-input {
     border-radius: 10px;
     height: 32px;
@@ -76,3 +96,4 @@ ul:hover{
     text-decoration: none;
     color: #d70466;
 }
+

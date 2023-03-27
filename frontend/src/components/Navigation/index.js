@@ -36,13 +36,19 @@ function Navigation(){
                     {/* <HomeIcon /> */}
                     <i class="fa-solid fa-bed fa-2x"></i>
                 </NavLink>
-                <div className="search-bar">
-                    <input
+                <div className="about-links">
+                    <a className="about" href= "https://www.linkedin.com/in/david-cabuay-48a83172/" target="_blank">LinkedIn</a>
+                    <a className="about" href='https://github.com/davidcabuay/BednBrekkie'target="_blank">GitHub</a>
+                    <a className="about" href='https://wellfound.com/u/david-cabuay' target="_blank">Wellfound</a>
+                    <a className="about" target="_blank">Portfolio</a>
+
+
+                    {/* <input
                         type="search"
                         placeholder="Future Feature"
                         className="search-input"
                     />
-                    <button className='searchbutton'>Search</button>
+                    <button className='searchbutton'>Search</button> */}
                 </div>
                 <div className='sessionlink'>{sessionLinks}</div>
                 {modal === 'login' && <LoginFormModal/>}
