@@ -53,19 +53,19 @@ export default function ListingShow(){
                             <div className="maindesc">What this place offers</div>
                             <div className='flex'>
                                 <div>
-                                    <div> <i class="fa-solid fa-umbrella-beach"></i> Ocean view</div>
-                                    <div> <i class="fa-solid fa-mountain"></i> Mountain View</div>
-                                    <div> <i class="fa-solid fa-kitchen-set"></i> Kitchen</div>
+                                    <div> <i className="fa-solid fa-umbrella-beach"></i> Ocean view</div>
+                                    <div> <i className="fa-solid fa-mountain"></i> Mountain View</div>
+                                    <div> <i className="fa-solid fa-kitchen-set"></i> Kitchen</div>
                                 </div>
                                 <div>
-                                    <div> <i class="fa-solid fa-wifi"></i> Wifi</div>
-                                    <div> <i class="fa-solid fa-car"></i> Free Parking</div>
-                                    <div> <i class="fa-solid fa-house-laptop"></i> Dedicated workspace</div>
+                                    <div> <i className="fa-solid fa-wifi"></i> Wifi</div>
+                                    <div> <i className="fa-solid fa-car"></i> Free Parking</div>
+                                    <div> <i className="fa-solid fa-house-laptop"></i> Dedicated workspace</div>
                                 </div>
                                 <div>
-                                    <div> <i class="fa-solid fa-key"></i> Self Check-in</div>
-                                    <div> <i class="fa-solid fa-bath"></i> Bathtub</div>
-                                    <div> <i class="fa-solid fa-tv"></i> TV</div>
+                                    <div> <i className="fa-solid fa-key"></i> Self Check-in</div>
+                                    <div> <i className="fa-solid fa-bath"></i> Bathtub</div>
+                                    <div> <i className="fa-solid fa-tv"></i> TV</div>
                                 </div>
                             </div>
                         </div>

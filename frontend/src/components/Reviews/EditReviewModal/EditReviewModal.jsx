@@ -56,7 +56,7 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{cleanliness}</div>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                     {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{communication}</div>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                     {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{checkin}</div>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                     {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
@@ -98,7 +98,7 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{accuracy}</div>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                     {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
@@ -112,7 +112,7 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{location}</div>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                     {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>
@@ -126,7 +126,7 @@ export default function EditReviewModal({review, onCancel}){
                     className = 'slider'
                     />
                     <div>{value}</div>
-                    <i class="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star"></i>
                     {/* <StarRateRoundedIcon style={{fontSize:'18px', marginTop:'-2px'}}/> */}
                     </div>
                 </div>

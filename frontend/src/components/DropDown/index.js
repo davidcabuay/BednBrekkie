@@ -47,7 +47,7 @@ function DropdownMenu(){
         <>
             <div className='ddwrapper' > 
                 {/* <MenuIcon className='menu' onClick={handleDropdown}/> */}
-                <i class="fa-solid fa-bars fa-2x" style={{cursor:'pointer', color:'#d70466'}}onClick={handleDropdown}></i>
+                <i className="fa-solid fa-bars fa-2x" style={{cursor:'pointer', color:'#d70466'}}onClick={handleDropdown}></i>
                 {isOpen && (
                     <div className='dropdown-context'>
                         <ul className='profile-dropdown'>

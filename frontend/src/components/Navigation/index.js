@@ -34,7 +34,7 @@ function Navigation(){
             
                 <NavLink className = 'Homelink' exact to="/">
                     {/* <HomeIcon /> */}
-                    <i class="fa-solid fa-bed fa-2x"></i>
+                    <i className="fa-solid fa-bed fa-2x"></i>
                 </NavLink>
                 <div className="about-links">
                     <a className="about" href= "https://www.linkedin.com/in/david-cabuay-48a83172/" target="_blank">LinkedIn</a>

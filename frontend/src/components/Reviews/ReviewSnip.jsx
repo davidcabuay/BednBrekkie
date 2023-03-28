@@ -62,7 +62,7 @@ export default function ReviewSnip({listing}){
         <div>
             <div className='starReview'>
                 {/* <StarRateRounded style={{fontSize: '14px'}}className='star'/> */}
-                <i class="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
                 <div>{avgRating}</div>
             </div>
         </div>
