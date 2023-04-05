@@ -20,6 +20,6 @@ class Api::ListingsController < ApplicationController
 
   private
   def listing_params
-    params.require(:listing).permit(:host_id, :price, :title, :description, :address, :city, :num_of_guests, :num_of_bedrooms, :num_of_beds, :num_of_baths)
+    params.require(:listing).permit(:host_id, :price, :title, :description, :address, :city, :num_of_guests, :num_of_bedrooms, :num_of_beds, :num_of_baths, :long, :lat)
   end
 end

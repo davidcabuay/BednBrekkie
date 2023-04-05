@@ -17,7 +17,7 @@
 #  updated_at      :datetime         not null
 #
 class Listing < ApplicationRecord
-  validates :host_id, :price, :title, :description, :address, :city, :num_of_guests, :num_of_bedrooms, :num_of_beds, :num_of_baths, presence: true
+  validates :host_id, :price, :title, :description, :address, :city, :num_of_guests, :num_of_bedrooms, :num_of_beds, :num_of_baths, :long, :lat, presence: true
   
   belongs_to :host,
     foreign_key: :host_id,
