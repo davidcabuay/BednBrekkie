@@ -53,7 +53,9 @@ require "open-uri"
         num_of_guests: 8,
         num_of_bedrooms: 3,
         num_of_baths: 2,
-        num_of_beds: 4
+        num_of_beds: 4,
+        long: -122.516355,
+        lat: 37.529319
         ) 
     # end
     listing1.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing1main.jpg"), filename: "listing1main.jpg")
@@ -73,7 +75,9 @@ require "open-uri"
         num_of_guests: 4,
         num_of_bedrooms: 2,
         num_of_baths: 1,
-        num_of_beds: 3
+        num_of_beds: 3,
+        long: -123.083862,
+        lat: 38.386410
         ) 
 
     listing2.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing2main.jpg"), filename: "listing2main.jpg")
@@ -92,7 +96,9 @@ require "open-uri"
         num_of_guests: 4,
         num_of_bedrooms: 1,
         num_of_baths: 1,
-        num_of_beds: 2
+        num_of_beds: 2,
+        long: -123.431100,
+        lat: 38.708343
         ) 
 
     listing3.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing3main.jpg"), filename: "listing3main.jpg")
@@ -111,7 +117,9 @@ require "open-uri"
         num_of_guests: 4,
         num_of_bedrooms: 2,
         num_of_baths: 2,
-        num_of_beds: 6
+        num_of_beds: 6,
+        long: -121.822453,
+        lat: 36.873556
         ) 
 
     listing4.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing4main.jpg"), filename: "listing4main.jpg")
@@ -130,7 +138,9 @@ require "open-uri"
         num_of_guests: 8,
         num_of_bedrooms: 3,
         num_of_baths: 3,
-        num_of_beds: 6
+        num_of_beds: 6,
+        long: -121.822453,
+        lat: 37.541860
         )
         
     listing5.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing5main.jpg"), filename: "listing5main.jpg")
@@ -149,7 +159,9 @@ require "open-uri"
         num_of_guests: 8,
         num_of_bedrooms: 3,
         num_of_baths: 3,
-        num_of_beds: 4
+        num_of_beds: 4,
+        long: -121.971818,
+        lat: 36.955875
         ) 
 
     listing6.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing6main.jpg"), filename: "listing6main.jpg")
@@ -168,7 +180,9 @@ require "open-uri"
         num_of_guests: 7,
         num_of_bedrooms: 3,
         num_of_baths: 3,
-        num_of_beds: 4
+        num_of_beds: 4,
+        long: -121.799882,
+        lat: 36.764763
         ) 
 
     listing7.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing7main.jpg"), filename: "listing7main.jpg")
@@ -187,7 +201,9 @@ require "open-uri"
         num_of_guests: 12,
         num_of_bedrooms: 4,
         num_of_baths: 3,
-        num_of_beds: 6
+        num_of_beds: 6,
+        long: -123.012107,
+        lat: 38.306467
         ) 
 
     listing8.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing8main.jpg"), filename: "listing8main.jpg")
@@ -206,7 +222,9 @@ require "open-uri"
         num_of_guests: 6,
         num_of_bedrooms: 2,
         num_of_baths: 1,
-        num_of_beds: 4
+        num_of_beds: 4,
+        long: -121.994276,
+        lat: 36.963411
         )
 
     listing9.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing9main.jpg"), filename: "listing9main.jpg")
@@ -225,7 +243,9 @@ require "open-uri"
         num_of_guests: 12,
         num_of_bedrooms: 4,
         num_of_baths: 4,
-        num_of_beds: 8
+        num_of_beds: 8,
+        long: -121.812117,
+        lat: 36.856917
         ) 
 
     listing10.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing10main.jpg"), filename: "listing10main.jpg")
@@ -244,7 +264,9 @@ require "open-uri"
         num_of_guests: 8,
         num_of_bedrooms: 3,
         num_of_baths: 2,
-        num_of_beds: 5
+        num_of_beds: 5,
+        long: 36.956877,
+        lat: -121.975531
         ) 
     
     listing11.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing11main.jpg"), filename: "listing11main.jpg")
@@ -263,7 +285,9 @@ require "open-uri"
         num_of_guests: 4,
         num_of_bedrooms: 2,
         num_of_baths: 2,
-        num_of_beds: 4
+        num_of_beds: 4,
+        long: -122.638868,
+        lat: 37.897311
         ) 
     
     listing12.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing12main.jpg"), filename: "listing12main.jpg")
@@ -282,7 +306,9 @@ require "open-uri"
         num_of_guests: 10,
         num_of_bedrooms: 3,
         num_of_baths: 3,
-        num_of_beds: 6
+        num_of_beds: 6,
+        long: -122.965429,
+        lat: 38.257236
         ) 
     
     listing13.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing13main.jpg"), filename: "listing13main.jpg")
@@ -301,7 +327,9 @@ require "open-uri"
         num_of_guests: 6,
         num_of_bedrooms: 3,
         num_of_baths: 4,
-        num_of_beds: 3
+        num_of_beds: 3,
+        long: -123.287795,
+        lat: 38.540383
         ) 
     
     listing14.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing14main.jpg"), filename: "listing14main.jpg")
@@ -320,7 +348,9 @@ require "open-uri"
         num_of_guests: 3,
         num_of_bedrooms: 1,
         num_of_baths: 1,
-        num_of_beds: 2
+        num_of_beds: 2,
+        long: -122.496654,
+        lat: 37.739219
         ) 
     
     listing15.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing15main.jpg"), filename: "listing15main.jpg")
@@ -339,7 +369,9 @@ require "open-uri"
         num_of_guests: 3,
         num_of_bedrooms: 1,
         num_of_baths: 1,
-        num_of_beds: 1
+        num_of_beds: 1,
+        long: -124.075774,
+        lat: 40.043613
         ) 
     
     listing16.photos.attach(io: URI.open("https://bednbrekkie-seeds.s3.us-west-1.amazonaws.com/listing16main.jpg"), filename: "listing16main.jpg")
