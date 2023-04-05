@@ -7,6 +7,7 @@ import ReservationForm from "../Reservations/ReservationForm";
 import ReviewIndex from '../Reviews/ReviewIndex';
 import ReviewLine from '../Reviews/ReviewLine';
 import './listingShow.css'
+import ShowMap from "../Map/ShowMap";
 
 export default function ListingShow(){
     const dispatch = useDispatch();
@@ -82,7 +83,9 @@ export default function ListingShow(){
                         </div>
                     </div>
                 </div>
-            
+                <div>
+                    <ShowMap listing={listing}/>
+                </div>
             </div>
         </>
     )

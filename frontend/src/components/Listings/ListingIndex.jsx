@@ -9,7 +9,7 @@ export default function ListingIndex(){
     // const listings = useSelector(getListings);
     const listings = useSelector(getListings);
 
-
+    console.log("ALL LISTINGS", listings)
     useEffect(()=>{
         dispatch(fetchListings())
     }, [dispatch])

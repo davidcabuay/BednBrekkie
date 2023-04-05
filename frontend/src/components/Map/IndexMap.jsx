@@ -1,4 +1,4 @@
-import { GoogleMap, useLoadScript } from "@react-google-maps/api"
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -18,22 +18,24 @@ function Map(){
         dispatch(fetchListings)
     })
 
-    const center = useMemo(() => ({lat: 37.8, lng: -122.4}), [])
+    const center = useMemo(() => ({lat: 36.343286, lng: -120.07928}), [])
 
     const handleMarkerClick = (listing) => {
         history.push(`/listings/${listing.id}`);
     }
     
+    if (!listings) return null;
+
     return (
         <div>
             <GoogleMap
-            zoom = {10}
+            zoom = {5}
             center ={center}
             mapContainerClassName="index-map-container"
             >
                 {listings.map((listing) =>
                     <div>
-                        <MarkerF onClick={() => handlePinClick(listing)} position={{lat: listing.latitude, lng: listing.longitude}} key={listing.id} />
+                        <Marker onClick={() => handleMarkerClick(listing)} position={{lat: listing.lat, lng: listing.long}} key={listing.id} />
                     </div>
                 )}
             </GoogleMap>
@@ -49,10 +51,5 @@ export default function IndexMap(){
 
     if(!isLoaded) return <div>Loading...</div>;
     return <Map />
-    return(
-        <div>
-            <Map/>
-        </div>
-    )
 }
 
