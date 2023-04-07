@@ -1,0 +1,15 @@
+.indexmapcontainer {
+    width: 100vw;
+    height: 90vw;
+    overflow-y:hidden;
+}
+
+.index-map-container {
+    width: 100vw;
+    height: 45vw
+}
+
+Marker {
+    font-size: 8px;
+    color: whitesmoke
+}

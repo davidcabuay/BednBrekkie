@@ -1,13 +1,14 @@
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
+// import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api"
 import { useMemo } from "react";
+import './showmap.css'
+import { useLoadScript, Marker, GoogleMap } from "@react-google-maps/api";
 
 function Map({listing}){
-    console.log("listing",listing)
     const center = useMemo(() => ({lat: listing.lat, lng: listing.long}), [])
     if (!listing) return null;
 
     return (
-        <div>
+        <div className='showmap'>
             <GoogleMap
             zoom = {10}
             center ={center}

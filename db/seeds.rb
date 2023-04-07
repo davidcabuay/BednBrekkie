@@ -139,7 +139,7 @@ require "open-uri"
         num_of_bedrooms: 3,
         num_of_baths: 3,
         num_of_beds: 6,
-        long: -121.822453,
+        long: -122.509140,
         lat: 37.541860
         )
         

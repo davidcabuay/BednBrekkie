@@ -132,10 +132,34 @@
         height: 90vw;
     }
  /* need to fix side margins */
-
 }
 
 .listItem:link { text-decoration: none;}
 .listItem:visited { text-decoration: none;}
 .listItem:hover { text-decoration: none;}
 .listItem:active { text-decoration: none;}
+
+#toggle-button {
+    background-color:#d70466 ;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;;
+    border-radius: 8px;
+    height: 36px;
+    color: aliceblue;
+    border-color: transparent;
+    width: 80px;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+#toggle-button:hover {
+    background-color:#e61e4d;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 30px;
+}
